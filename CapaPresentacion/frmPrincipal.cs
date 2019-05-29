@@ -303,5 +303,11 @@ namespace CapaPresentacion
             lbhoraPrincipal.Text = DateTime.Now.ToString();
 
         }
+
+        private void empresasRNCToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEmpresas frm = new FrmEmpresas();
+            frm.Show();
+        }
     }
 }

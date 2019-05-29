@@ -39,6 +39,8 @@
               <Mapping SourceColumn="descuento" DataSetColumn="descuento" />
               <Mapping SourceColumn="Total_Parcial" DataSetColumn="Total_Parcial" />
               <Mapping SourceColumn="NCF" DataSetColumn="NCF" />
+              <Mapping SourceColumn="nombreEmp" DataSetColumn="nombreEmp" />
+              <Mapping SourceColumn="RNC" DataSetColumn="RNC" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -50,7 +52,7 @@
   <xs:element name="DataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DataSet3" msprop:Generator_UserDSName="DataSet3">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="spreporte_factura" msprop:Generator_TableClassName="spreporte_facturaDataTable" msprop:Generator_TableVarName="tablespreporte_factura" msprop:Generator_TablePropName="spreporte_factura" msprop:Generator_RowDeletingName="spreporte_facturaRowDeleting" msprop:Generator_RowChangingName="spreporte_facturaRowChanging" msprop:Generator_RowEvHandlerName="spreporte_facturaRowChangeEventHandler" msprop:Generator_RowDeletedName="spreporte_facturaRowDeleted" msprop:Generator_UserTableName="spreporte_factura" msprop:Generator_RowChangedName="spreporte_facturaRowChanged" msprop:Generator_RowEvArgName="spreporte_facturaRowChangeEvent" msprop:Generator_RowClassName="spreporte_facturaRow">
+        <xs:element name="spreporte_factura" msprop:Generator_TableClassName="spreporte_facturaDataTable" msprop:Generator_TableVarName="tablespreporte_factura" msprop:Generator_RowChangedName="spreporte_facturaRowChanged" msprop:Generator_TablePropName="spreporte_factura" msprop:Generator_RowDeletingName="spreporte_facturaRowDeleting" msprop:Generator_RowChangingName="spreporte_facturaRowChanging" msprop:Generator_RowEvHandlerName="spreporte_facturaRowChangeEventHandler" msprop:Generator_RowDeletedName="spreporte_facturaRowDeleted" msprop:Generator_RowClassName="spreporte_facturaRow" msprop:Generator_UserTableName="spreporte_factura" msprop:Generator_RowEvArgName="spreporte_facturaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idventa" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnidventa" msprop:Generator_ColumnPropNameInRow="idventa" msprop:Generator_ColumnPropNameInTable="idventaColumn" msprop:Generator_UserColumnName="idventa" type="xs:int" />
@@ -127,6 +129,20 @@
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombreEmp" msprop:Generator_ColumnVarNameInTable="columnnombreEmp" msprop:Generator_ColumnPropNameInRow="nombreEmp" msprop:Generator_ColumnPropNameInTable="nombreEmpColumn" msprop:Generator_UserColumnName="nombreEmp" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RNC" msprop:Generator_ColumnVarNameInTable="columnRNC" msprop:Generator_ColumnPropNameInRow="RNC" msprop:Generator_ColumnPropNameInTable="RNCColumn" msprop:Generator_UserColumnName="RNC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

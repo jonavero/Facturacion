@@ -105,6 +105,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbventasDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dbventasReporte.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbventasReporte.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsPrincipal.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -127,6 +132,12 @@
     </Compile>
     <Compile Include="frmCliente.Designer.cs">
       <DependentUpon>frmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEmpresas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmpresas.Designer.cs">
+      <DependentUpon>FrmEmpresas.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmIngreso.cs">
       <SubType>Form</SubType>
@@ -311,6 +322,9 @@
     <EmbeddedResource Include="frmCliente.resx">
       <DependentUpon>frmCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmpresas.resx">
+      <DependentUpon>FrmEmpresas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmIngreso.resx">
       <DependentUpon>FrmIngreso.cs</DependentUpon>
     </EmbeddedResource>
@@ -446,6 +460,17 @@
     </None>
     <None Include="dbventasDataSet.xss">
       <DependentUpon>dbventasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbventasReporte.xsc">
+      <DependentUpon>dbventasReporte.xsd</DependentUpon>
+    </None>
+    <None Include="dbventasReporte.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbventasReporte.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbventasReporte.xss">
+      <DependentUpon>dbventasReporte.xsd</DependentUpon>
     </None>
     <None Include="dsPrincipal.xsc">
       <DependentUpon>dsPrincipal.xsd</DependentUpon>

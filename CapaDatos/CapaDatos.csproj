@@ -48,6 +48,7 @@
     <Compile Include="DComprobante.cs" />
     <Compile Include="DDetalle_Ingreso.cs" />
     <Compile Include="DDetalle_Venta.cs" />
+    <Compile Include="DEmpresasRNC.cs" />
     <Compile Include="DIngreso.cs" />
     <Compile Include="DPresentacion.cs" />
     <Compile Include="DProveedor.cs" />

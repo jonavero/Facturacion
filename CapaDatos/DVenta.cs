@@ -21,6 +21,7 @@ namespace CapaDatos
         private string _Correlativo;
         private decimal _Igv;
         private string _NCF;
+        private int _IdEmpresa;
 
 
         public int Idventa
@@ -78,6 +79,13 @@ namespace CapaDatos
             set { _NCF = value; }
         }
 
+        public int IdEmpresa
+        {
+            get { return _IdEmpresa; }
+            set { _IdEmpresa = value; }
+        }
+
+
         //Constructores 
         public DVenta()
         {
@@ -85,7 +93,7 @@ namespace CapaDatos
         }
         public DVenta(int idventa,int idcliente,int idtrabajador,
             DateTime fecha,string tipo_comprobante,string serie,
-            string correlativo,decimal igv, string ncf)
+            string correlativo,decimal igv, string ncf, int idEmpresa)
         {
             this.Idventa = idventa;
             this.Idcliente = idcliente;
@@ -96,6 +104,7 @@ namespace CapaDatos
             this.Correlativo = correlativo;
             this.Igv = igv;
             this.NCF = ncf;
+            this.IdEmpresa = IdEmpresa;
             
         }
         //Métodos
@@ -222,6 +231,11 @@ namespace CapaDatos
                 ParNcf.Value = Venta.NCF;
                 SqlCmd.Parameters.Add(ParNcf);
 
+                SqlParameter ParIdEmpresa = new SqlParameter();
+                ParIdEmpresa.ParameterName = "@idEmpresa";
+                ParIdEmpresa.SqlDbType = SqlDbType.Int;
+                ParIdEmpresa.Value = Venta.IdEmpresa;
+                SqlCmd.Parameters.Add(ParIdEmpresa);
 
                 //Ejecutamos nuestro comando
 
@@ -314,7 +328,7 @@ namespace CapaDatos
             return rpta;
         }
 
-        //Método Mostrar
+        //Método Mostrar 
         public DataTable Mostrar()
         {
             DataTable DtResultado = new DataTable("venta");

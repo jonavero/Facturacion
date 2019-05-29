@@ -12,7 +12,8 @@ namespace CapaNegocio
     public class NVenta
     {
         public static string Insertar(int idcliente, int idtrabajador, DateTime fecha,
-            string tipo_comprobante, string serie, string correlativo, decimal igv,string ncf,
+            string tipo_comprobante, string serie, string correlativo, 
+            decimal igv,string ncf, int idEmpresa, 
             DataTable dtDetalles)
         {
             DVenta Obj = new DVenta();
@@ -24,6 +25,8 @@ namespace CapaNegocio
             Obj.Correlativo = correlativo;
             Obj.Igv = igv;
             Obj.NCF = ncf;
+            Obj.IdEmpresa = idEmpresa;
+
             List<DDetalle_Venta> detalles = new List<DDetalle_Venta>();
             foreach (DataRow row in dtDetalles.Rows)
             {

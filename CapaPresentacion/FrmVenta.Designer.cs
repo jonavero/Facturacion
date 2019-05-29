@@ -71,6 +71,10 @@
             this.label16 = new System.Windows.Forms.Label();
             this.dataListadoDetalle = new System.Windows.Forms.DataGridView();
             this.gbNCF = new System.Windows.Forms.GroupBox();
+            this.lbEmpresaRNC = new System.Windows.Forms.Label();
+            this.btnBuscarRNC = new System.Windows.Forms.Button();
+            this.txtEmpresa = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.rbConsumidor = new System.Windows.Forms.RadioButton();
             this.label17 = new System.Windows.Forms.Label();
             this.rbFiscal = new System.Windows.Forms.RadioButton();
@@ -170,6 +174,7 @@
             this.txtCorrelativo.Name = "txtCorrelativo";
             this.txtCorrelativo.Size = new System.Drawing.Size(82, 20);
             this.txtCorrelativo.TabIndex = 25;
+            this.txtCorrelativo.Text = "43387";
             // 
             // label8
             // 
@@ -254,6 +259,7 @@
             this.txtSerie.Name = "txtSerie";
             this.txtSerie.Size = new System.Drawing.Size(46, 20);
             this.txtSerie.TabIndex = 11;
+            this.txtSerie.Text = "1318";
             // 
             // label6
             // 
@@ -568,6 +574,10 @@
             // 
             // gbNCF
             // 
+            this.gbNCF.Controls.Add(this.lbEmpresaRNC);
+            this.gbNCF.Controls.Add(this.btnBuscarRNC);
+            this.gbNCF.Controls.Add(this.txtEmpresa);
+            this.gbNCF.Controls.Add(this.label18);
             this.gbNCF.Controls.Add(this.rbConsumidor);
             this.gbNCF.Controls.Add(this.label17);
             this.gbNCF.Controls.Add(this.rbFiscal);
@@ -594,6 +604,46 @@
             this.gbNCF.Size = new System.Drawing.Size(641, 151);
             this.gbNCF.TabIndex = 28;
             this.gbNCF.TabStop = false;
+            // 
+            // lbEmpresaRNC
+            // 
+            this.lbEmpresaRNC.AutoSize = true;
+            this.lbEmpresaRNC.Location = new System.Drawing.Point(295, 108);
+            this.lbEmpresaRNC.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbEmpresaRNC.Name = "lbEmpresaRNC";
+            this.lbEmpresaRNC.Size = new System.Drawing.Size(0, 13);
+            this.lbEmpresaRNC.TabIndex = 51;
+            // 
+            // btnBuscarRNC
+            // 
+            this.btnBuscarRNC.Image = global::CapaPresentacion.Properties.Resources.Buscar_p;
+            this.btnBuscarRNC.Location = new System.Drawing.Point(434, 73);
+            this.btnBuscarRNC.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscarRNC.Name = "btnBuscarRNC";
+            this.btnBuscarRNC.Size = new System.Drawing.Size(32, 25);
+            this.btnBuscarRNC.TabIndex = 50;
+            this.btnBuscarRNC.UseVisualStyleBackColor = true;
+            this.btnBuscarRNC.Click += new System.EventHandler(this.btnBuscarRNC_Click);
+            // 
+            // txtEmpresa
+            // 
+            this.txtEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtEmpresa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmpresa.Location = new System.Drawing.Point(293, 77);
+            this.txtEmpresa.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEmpresa.Name = "txtEmpresa";
+            this.txtEmpresa.Size = new System.Drawing.Size(137, 20);
+            this.txtEmpresa.TabIndex = 49;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(212, 79);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(77, 13);
+            this.label18.TabIndex = 48;
+            this.label18.Text = "Empresa RNC:";
             // 
             // rbConsumidor
             // 
@@ -626,6 +676,7 @@
             this.rbFiscal.TabIndex = 45;
             this.rbFiscal.Text = "Crédito fiscal";
             this.rbFiscal.UseVisualStyleBackColor = true;
+            this.rbFiscal.CheckedChanged += new System.EventHandler(this.rbFiscal_CheckedChanged);
             // 
             // txtDescuento
             // 
@@ -636,6 +687,7 @@
             this.txtDescuento.Name = "txtDescuento";
             this.txtDescuento.Size = new System.Drawing.Size(60, 20);
             this.txtDescuento.TabIndex = 44;
+            this.txtDescuento.Text = "0";
             // 
             // label14
             // 
@@ -911,5 +963,9 @@
         private System.Windows.Forms.RadioButton rbConsumidor;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.RadioButton rbFiscal;
+        private System.Windows.Forms.Button btnBuscarRNC;
+        private System.Windows.Forms.TextBox txtEmpresa;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lbEmpresaRNC;
     }
 }

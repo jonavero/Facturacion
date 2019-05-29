@@ -15,6 +15,7 @@ namespace CapaPresentacion
     public partial class FrmVenta : Form
     {
         private bool IsNuevo = false;
+        public int _IdEmpresa = 1;
         public int Idtrabajador;
         private DataTable dtDetalle;
 
@@ -35,6 +36,13 @@ namespace CapaPresentacion
         {
             this.txtIdcliente.Text = idcliente;
             this.txtCliente.Text = nombre;
+        }
+
+        public void setEmpresa(int idEmpresa, string nombreEmpresa, string RNC)
+        {
+            txtEmpresa.Text = RNC;
+            lbEmpresaRNC.Text = nombreEmpresa;
+            this._IdEmpresa = idEmpresa;
         }
 
         public void setArticulo (string iddetalle_ingreso,string nombre,
@@ -96,6 +104,12 @@ namespace CapaPresentacion
             this.lblTotal_Pagado.Text = "0,0";
             this.txtIgv.Text = "18";
             this.crearTabla();
+            this.btnBuscarRNC.Enabled = false;
+            _IdEmpresa = 1;
+            lbEmpresaRNC.Text = "";
+            txtEmpresa.Clear();
+            this.rbConsumidor.Checked = true;
+            this.rbFiscal.Checked = false;
 
         }
         private void limpiarDetalle()
@@ -206,6 +220,8 @@ namespace CapaPresentacion
             this.Habilitar(false);
             this.Botones();
             this.crearTabla();
+            this.btnBuscarRNC.Enabled = false;
+            this.txtEmpresa.Enabled = false; 
         }
 
         private void FrmVenta_FormClosing(object sender, FormClosingEventArgs e)
@@ -332,8 +348,10 @@ namespace CapaPresentacion
             try
             {
                 string rpta = "";
+                
                 if (this.txtIdcliente.Text == string.Empty || this.txtSerie.Text == string.Empty
-                    || this.txtCorrelativo.Text == string.Empty || this.txtIgv.Text == string.Empty)
+                    || this.txtCorrelativo.Text == string.Empty || this.txtIgv.Text == string.Empty 
+                    )
                 {
                     MensajeError("Falta ingresar algunos datos, serán remarcados");
                     errorIcono.SetError(txtIdcliente, "Ingrese un Valor");
@@ -343,23 +361,34 @@ namespace CapaPresentacion
                 }
                 else
                 {
+                    if (dataListadoDetalle.RowCount != 0) {
+                        if (this.IsNuevo)
+                        {
+                            string comprobante;
 
-                    if (this.IsNuevo)
+                            if (rbConsumidor.Checked)
+                            {
+                                comprobante = NComprobante.getComprobante("consumidor final");
+                            }
+                            else
+                            {
+                                comprobante = NComprobante.getComprobante("credito fiscal");
+                                if (string.IsNullOrEmpty(this.txtEmpresa.Text))
+                                {
+                                    MensajeError("Empresa no seleccionada para comprobante fiscal");
+                                    return;
+                                }
+                            }
+                            rpta = NVenta.Insertar(Convert.ToInt32(this.txtIdcliente.Text), Idtrabajador,
+                                dtFecha.Value, cbTipo_Comprobante.Text, txtSerie.Text, txtCorrelativo.Text,
+                                Convert.ToDecimal(txtIgv.Text), comprobante, _IdEmpresa, dtDetalle);
+                        }
+                      
+                    }
+                    else
                     {
-                        string comprobante; 
-
-                        if (rbConsumidor.Checked)
-                        {
-                            comprobante = NComprobante.getComprobante("consumidor final");
-                        }
-                        else
-                        {
-                            comprobante = NComprobante.getComprobante("credito fiscal");
-                        }
-                        rpta = NVenta.Insertar(Convert.ToInt32(this.txtIdcliente.Text),Idtrabajador,
-                            dtFecha.Value, cbTipo_Comprobante.Text, txtSerie.Text, txtCorrelativo.Text,
-                            Convert.ToDecimal(txtIgv.Text), comprobante , dtDetalle);
-
+                        MensajeError("No hay productos en el detalle de esta venta");
+                        return;
                     }
 
 
@@ -400,7 +429,8 @@ namespace CapaPresentacion
             {
                 
                 if (this.txtIdarticulo.Text == string.Empty || this.txtCantidad.Text == string.Empty
-                    || this.txtDescuento.Text == string.Empty|| this.txtPrecio_Venta.Text == string.Empty)
+                    || this.txtDescuento.Text == string.Empty|| this.txtPrecio_Venta.Text == string.Empty
+                    )
                 {
                     MensajeError("Falta ingresar algunos datos, serán remarcados");
                     errorIcono.SetError(txtIdarticulo, "Ingrese un Valor");
@@ -493,6 +523,27 @@ namespace CapaPresentacion
             frm.Texto = Convert.ToString(dtFecha1.Value);
             frm.Texto2 = Convert.ToString(dtFecha2.Value);
             frm.ShowDialog();
+        }
+
+        private void btnBuscarRNC_Click(object sender, EventArgs e)
+        {
+            FrmEmpresas frmEmpresas = new FrmEmpresas();
+            frmEmpresas.ShowDialog();
+        }
+
+        private void rbFiscal_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbFiscal.Checked)
+            {
+                btnBuscarRNC.Enabled = true;
+            }
+            else
+            {
+                btnBuscarRNC.Enabled = false;
+                _IdEmpresa = 1;
+                lbEmpresaRNC.Text = "";
+                txtEmpresa.Clear();
+            }
         }
     }
 }

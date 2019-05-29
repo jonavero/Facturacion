@@ -313,6 +313,10 @@ namespace CapaPresentacion {
             
             private global::System.Data.DataColumn columnNCF;
             
+            private global::System.Data.DataColumn columnnombreEmp;
+            
+            private global::System.Data.DataColumn columnRNC;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public spreporte_facturaDataTable() {
@@ -484,6 +488,22 @@ namespace CapaPresentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn nombreEmpColumn {
+                get {
+                    return this.columnnombreEmp;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn RNCColumn {
+                get {
+                    return this.columnRNC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -535,7 +555,9 @@ namespace CapaPresentacion {
                         int cantidad, 
                         decimal descuento, 
                         decimal Total_Parcial, 
-                        string NCF) {
+                        string NCF, 
+                        string nombreEmp, 
+                        string RNC) {
                 spreporte_facturaRow rowspreporte_facturaRow = ((spreporte_facturaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -554,7 +576,9 @@ namespace CapaPresentacion {
                         cantidad,
                         descuento,
                         Total_Parcial,
-                        NCF};
+                        NCF,
+                        nombreEmp,
+                        RNC};
                 rowspreporte_facturaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowspreporte_facturaRow);
                 return rowspreporte_facturaRow;
@@ -601,6 +625,8 @@ namespace CapaPresentacion {
                 this.columndescuento = base.Columns["descuento"];
                 this.columnTotal_Parcial = base.Columns["Total_Parcial"];
                 this.columnNCF = base.Columns["NCF"];
+                this.columnnombreEmp = base.Columns["nombreEmp"];
+                this.columnRNC = base.Columns["RNC"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -640,6 +666,10 @@ namespace CapaPresentacion {
                 base.Columns.Add(this.columnTotal_Parcial);
                 this.columnNCF = new global::System.Data.DataColumn("NCF", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNCF);
+                this.columnnombreEmp = new global::System.Data.DataColumn("nombreEmp", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombreEmp);
+                this.columnRNC = new global::System.Data.DataColumn("RNC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRNC);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidventa}, true));
                 this.columnidventa.AutoIncrement = true;
@@ -669,6 +699,8 @@ namespace CapaPresentacion {
                 this.columndescuento.AllowDBNull = false;
                 this.columnTotal_Parcial.ReadOnly = true;
                 this.columnNCF.MaxLength = 25;
+                this.columnnombreEmp.MaxLength = 75;
+                this.columnRNC.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1028,6 +1060,38 @@ namespace CapaPresentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string nombreEmp {
+                get {
+                    try {
+                        return ((string)(this[this.tablespreporte_factura.nombreEmpColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'nombreEmp\' in table \'spreporte_factura\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespreporte_factura.nombreEmpColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string RNC {
+                get {
+                    try {
+                        return ((string)(this[this.tablespreporte_factura.RNCColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RNC\' in table \'spreporte_factura\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespreporte_factura.RNCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsTrabajadorNull() {
                 return this.IsNull(this.tablespreporte_factura.TrabajadorColumn);
             }
@@ -1096,6 +1160,30 @@ namespace CapaPresentacion {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetNCFNull() {
                 this[this.tablespreporte_factura.NCFColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsnombreEmpNull() {
+                return this.IsNull(this.tablespreporte_factura.nombreEmpColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetnombreEmpNull() {
+                this[this.tablespreporte_factura.nombreEmpColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsRNCNull() {
+                return this.IsNull(this.tablespreporte_factura.RNCColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetRNCNull() {
+                this[this.tablespreporte_factura.RNCColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1275,6 +1363,8 @@ namespace CapaPresentacion.DataSet3TableAdapters {
             tableMapping.ColumnMappings.Add("descuento", "descuento");
             tableMapping.ColumnMappings.Add("Total_Parcial", "Total_Parcial");
             tableMapping.ColumnMappings.Add("NCF", "NCF");
+            tableMapping.ColumnMappings.Add("nombreEmp", "nombreEmp");
+            tableMapping.ColumnMappings.Add("RNC", "RNC");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

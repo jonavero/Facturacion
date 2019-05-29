@@ -52,7 +52,7 @@
               <Width>2.83735cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.10674cm</Width>
+              <Width>2.93236cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.45766cm</Width>
@@ -220,7 +220,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Serie</Value>
+                              <Value>Empresa</Value>
                               <Style>
                                 <FontFamily>verdana</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -255,7 +255,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Correlativo</Value>
+                              <Value>RNC</Value>
                               <Style>
                                 <FontFamily>verdana</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -525,14 +525,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="serie">
+                    <Textbox Name="nombreEmp">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!serie.Value</Value>
+                              <Value>=Fields!nombreEmp.Value</Value>
                               <Style>
                                 <FontFamily>verdana</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -542,7 +542,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>serie</rd:DefaultName>
+                      <rd:DefaultName>nombreEmp</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -558,14 +558,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="correlativo">
+                    <Textbox Name="RNC">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!correlativo.Value</Value>
+                              <Value>=Fields!RNC.Value</Value>
                               <Style>
                                 <FontFamily>verdana</FontFamily>
                                 <FontSize>8pt</FontSize>
@@ -575,7 +575,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>correlativo</rd:DefaultName>
+                      <rd:DefaultName>RNC</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -893,7 +893,7 @@
         <Top>1.21133cm</Top>
         <Left>0.75504cm</Left>
         <Height>1.8cm</Height>
-        <Width>22.49094cm</Width>
+        <Width>24.31657cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -1164,7 +1164,7 @@
     <Height>29.7cm</Height>
     <Style />
   </Body>
-  <Width>23.90744cm</Width>
+  <Width>25.41557cm</Width>
   <Page>
     <PageHeader>
       <Height>2.54cm</Height>
@@ -1317,18 +1317,18 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="dsPrincipal">
+    <DataSource Name="dbventasReporte">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>2dbb3198-d9ce-4de6-a86f-67dea3b242ca</rd:DataSourceID>
+      <rd:DataSourceID>4463a9dd-0de9-46fa-a365-9db263347c52</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="DataSet1">
       <Query>
-        <DataSourceName>dsPrincipal</DataSourceName>
+        <DataSourceName>dbventasReporte</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -1364,18 +1364,30 @@
           <DataField>Total</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
-        <Field Name="Impuesto">
-          <DataField>Impuesto</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
         <Field Name="NCF">
           <DataField>NCF</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Impuesto">
+          <DataField>Impuesto</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="NCF1">
+          <DataField>NCF1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="nombreEmp">
+          <DataField>nombreEmp</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RNC">
+          <DataField>RNC</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>dsPrincipal</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\jonathanc\Desktop\Sistema Modificado\Sistema mejorado Venta\Sistema de Ventas C# - SQL Server 2014 - Incanatoit\Código Fuente\SisVentas\CapaPresentacion\dsPrincipal.xsd</rd:SchemaPath>
+        <rd:DataSetName>dbventasReporte</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\jonathanc\Desktop\Sistema Modificado\Sistema mejorado Venta\Sistema de Ventas C# - SQL Server 2014 - Incanatoit\Código Fuente\SisVentas\CapaPresentacion\dbventasReporte.xsd</rd:SchemaPath>
         <rd:TableName>spbuscar_venta_fecha</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

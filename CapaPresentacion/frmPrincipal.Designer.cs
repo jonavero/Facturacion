@@ -74,6 +74,7 @@
             this.lbhoraPrincipal = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.empresasRNCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -131,7 +132,7 @@
             // 
             this.artículosToolStripMenuItem.Image = global::CapaPresentacion.Properties.Resources.productos_m1;
             this.artículosToolStripMenuItem.Name = "artículosToolStripMenuItem";
-            this.artículosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.artículosToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.artículosToolStripMenuItem.Text = "Artículos";
             this.artículosToolStripMenuItem.Click += new System.EventHandler(this.artículosToolStripMenuItem_Click);
             // 
@@ -139,7 +140,7 @@
             // 
             this.categoríasToolStripMenuItem.Image = global::CapaPresentacion.Properties.Resources.My_Icons;
             this.categoríasToolStripMenuItem.Name = "categoríasToolStripMenuItem";
-            this.categoríasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.categoríasToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.categoríasToolStripMenuItem.Text = "Categorías";
             this.categoríasToolStripMenuItem.Click += new System.EventHandler(this.categoríasToolStripMenuItem_Click);
             // 
@@ -147,7 +148,7 @@
             // 
             this.presentacionesToolStripMenuItem.Image = global::CapaPresentacion.Properties.Resources.Ver_recibo;
             this.presentacionesToolStripMenuItem.Name = "presentacionesToolStripMenuItem";
-            this.presentacionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.presentacionesToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.presentacionesToolStripMenuItem.Text = "Presentaciones";
             this.presentacionesToolStripMenuItem.Click += new System.EventHandler(this.presentacionesToolStripMenuItem_Click);
             // 
@@ -191,7 +192,7 @@
             // 
             this.ventasToolStripMenuItem1.Image = global::CapaPresentacion.Properties.Resources.ventas2;
             this.ventasToolStripMenuItem1.Name = "ventasToolStripMenuItem1";
-            this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
+            this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.ventasToolStripMenuItem1.Text = "Ventas";
             this.ventasToolStripMenuItem1.Click += new System.EventHandler(this.ventasToolStripMenuItem1_Click);
             // 
@@ -199,14 +200,15 @@
             // 
             this.clientesToolStripMenuItem.Image = global::CapaPresentacion.Properties.Resources.iconfinder_clients_435732;
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // MnuMantenimiento
             // 
             this.MnuMantenimiento.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.trabajadoresToolStripMenuItem});
+            this.trabajadoresToolStripMenuItem,
+            this.empresasRNCToolStripMenuItem});
             this.MnuMantenimiento.Image = global::CapaPresentacion.Properties.Resources.report;
             this.MnuMantenimiento.Name = "MnuMantenimiento";
             this.MnuMantenimiento.Size = new System.Drawing.Size(117, 20);
@@ -300,7 +302,7 @@
             this.backUpBDToolStripMenuItem});
             this.optionsToolStripMenuItem.Image = global::CapaPresentacion.Properties.Resources.Database;
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(89, 22);
             this.optionsToolStripMenuItem.Text = "&BD";
             this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
             // 
@@ -455,6 +457,13 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // empresasRNCToolStripMenuItem
+            // 
+            this.empresasRNCToolStripMenuItem.Name = "empresasRNCToolStripMenuItem";
+            this.empresasRNCToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.empresasRNCToolStripMenuItem.Text = "Empresas RNC";
+            this.empresasRNCToolStripMenuItem.Click += new System.EventHandler(this.empresasRNCToolStripMenuItem_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -531,6 +540,7 @@
         private System.Windows.Forms.ToolStripButton TsVentas;
         private System.Windows.Forms.ToolStripStatusLabel lbhoraPrincipal;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripMenuItem empresasRNCToolStripMenuItem;
     }
 }
 
