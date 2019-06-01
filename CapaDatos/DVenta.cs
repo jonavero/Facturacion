@@ -22,6 +22,8 @@ namespace CapaDatos
         private decimal _Igv;
         private string _NCF;
         private int _IdEmpresa;
+        private string _TipoPago;
+        private decimal _Monto;
 
 
         public int Idventa
@@ -85,6 +87,18 @@ namespace CapaDatos
             set { _IdEmpresa = value; }
         }
 
+        public string TipoPago
+        {
+            get { return _TipoPago; }
+            set { _TipoPago = value; }
+        }
+
+        public decimal Monto
+        {
+            get { return _Monto; }
+            set { _Monto = value; }
+        }
+
 
         //Constructores 
         public DVenta()
@@ -93,7 +107,7 @@ namespace CapaDatos
         }
         public DVenta(int idventa,int idcliente,int idtrabajador,
             DateTime fecha,string tipo_comprobante,string serie,
-            string correlativo,decimal igv, string ncf, int idEmpresa)
+            string correlativo,decimal igv, string ncf, int idEmpresa,string tipoPago, decimal monto)
         {
             this.Idventa = idventa;
             this.Idcliente = idcliente;
@@ -104,7 +118,9 @@ namespace CapaDatos
             this.Correlativo = correlativo;
             this.Igv = igv;
             this.NCF = ncf;
-            this.IdEmpresa = IdEmpresa;
+            this.IdEmpresa = idEmpresa;
+            this.TipoPago = tipoPago;
+            this.Monto = monto;
             
         }
         //Métodos
@@ -236,6 +252,19 @@ namespace CapaDatos
                 ParIdEmpresa.SqlDbType = SqlDbType.Int;
                 ParIdEmpresa.Value = Venta.IdEmpresa;
                 SqlCmd.Parameters.Add(ParIdEmpresa);
+
+                SqlParameter ParTipoPago = new SqlParameter();
+                ParTipoPago.ParameterName = "@tipo_pago";
+                ParTipoPago.SqlDbType = SqlDbType.VarChar;
+                ParTipoPago.Size = 25;
+                ParTipoPago.Value = Venta.TipoPago;
+                SqlCmd.Parameters.Add(ParTipoPago);
+
+                SqlParameter ParMonto = new SqlParameter();
+                ParMonto.ParameterName = "@monto_pagado";
+                ParMonto.SqlDbType = SqlDbType.Decimal;
+                ParMonto.Value = Venta.Monto;
+                SqlCmd.Parameters.Add(ParMonto);
 
                 //Ejecutamos nuestro comando
 

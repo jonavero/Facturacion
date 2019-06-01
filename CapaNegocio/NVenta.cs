@@ -13,7 +13,7 @@ namespace CapaNegocio
     {
         public static string Insertar(int idcliente, int idtrabajador, DateTime fecha,
             string tipo_comprobante, string serie, string correlativo, 
-            decimal igv,string ncf, int idEmpresa, 
+            decimal igv,string ncf, int idEmpresa, string tipoPago, decimal monto,  
             DataTable dtDetalles)
         {
             DVenta Obj = new DVenta();
@@ -26,6 +26,8 @@ namespace CapaNegocio
             Obj.Igv = igv;
             Obj.NCF = ncf;
             Obj.IdEmpresa = idEmpresa;
+            Obj.TipoPago = tipoPago;
+            Obj.Monto = monto;
 
             List<DDetalle_Venta> detalles = new List<DDetalle_Venta>();
             foreach (DataRow row in dtDetalles.Rows)

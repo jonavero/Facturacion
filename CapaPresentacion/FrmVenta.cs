@@ -18,6 +18,9 @@ namespace CapaPresentacion
         public int _IdEmpresa = 1;
         public int Idtrabajador;
         private DataTable dtDetalle;
+        private string _TipoPago = "Efectivo";
+        private decimal _Monto = 0;
+
 
         private decimal totalPagado = 0;
 
@@ -36,6 +39,11 @@ namespace CapaPresentacion
         {
             this.txtIdcliente.Text = idcliente;
             this.txtCliente.Text = nombre;
+        }
+
+        public void setMonto(decimal monto)
+        {
+            this._Monto = monto;
         }
 
         public void setEmpresa(int idEmpresa, string nombreEmpresa, string RNC)
@@ -103,6 +111,9 @@ namespace CapaPresentacion
             this.txtIgv.Text = string.Empty;
             this.lblTotal_Pagado.Text = "0,0";
             this.txtIgv.Text = "18";
+            this.txtSerie.Text = "1318";
+            this.txtCorrelativo.Text = "43387";
+            this.txtDescuento.Text = "0";
             this.crearTabla();
             this.btnBuscarRNC.Enabled = false;
             _IdEmpresa = 1;
@@ -186,8 +197,8 @@ namespace CapaPresentacion
         //Método BuscarFechas
         private void BuscarFechas()
         {
-            this.dataListado.DataSource = NVenta.BuscarFechas(this.dtFecha1.Value.ToString("MM/dd/yyyy"),
-                this.dtFecha2.Value.ToString("MM/dd/yyyy"));
+            this.dataListado.DataSource = NVenta.BuscarFechas(this.dtFecha1.Value.ToString("dd/MM/yyyy"),
+                this.dtFecha2.Value.ToString("dd/MM/yyyy"));
             this.OcultarColumnas();
             lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
         }
@@ -373,15 +384,26 @@ namespace CapaPresentacion
                             else
                             {
                                 comprobante = NComprobante.getComprobante("credito fiscal");
+
                                 if (string.IsNullOrEmpty(this.txtEmpresa.Text))
                                 {
                                     MensajeError("Empresa no seleccionada para comprobante fiscal");
                                     return;
                                 }
                             }
-                            rpta = NVenta.Insertar(Convert.ToInt32(this.txtIdcliente.Text), Idtrabajador,
-                                dtFecha.Value, cbTipo_Comprobante.Text, txtSerie.Text, txtCorrelativo.Text,
-                                Convert.ToDecimal(txtIgv.Text), comprobante, _IdEmpresa, dtDetalle);
+                            FrmDevueltaFactura frmDevuelta = new FrmDevueltaFactura();
+                            frmDevuelta.establecerTotal(totalPagado);
+                            if (frmDevuelta.ShowDialog() == DialogResult.OK)
+                            {
+                                rpta = NVenta.Insertar(Convert.ToInt32(this.txtIdcliente.Text), Idtrabajador,
+                                 dtFecha.Value, cbTipo_Comprobante.Text, txtSerie.Text, txtCorrelativo.Text,
+                                 Convert.ToDecimal(txtIgv.Text), comprobante, _IdEmpresa, _TipoPago, _Monto ,dtDetalle);
+                            }
+                            else
+                            {
+                                return;
+                            }
+                         
                         }
                       
                     }
@@ -404,6 +426,7 @@ namespace CapaPresentacion
                     else
                     {
                         this.MensajeError(rpta);
+                        return; 
                     }
 
                     this.IsNuevo = false;
@@ -545,5 +568,17 @@ namespace CapaPresentacion
                 txtEmpresa.Clear();
             }
         }
+
+    
+        private void rbEfectivo_CheckedChanged(object sender, EventArgs e)
+        {
+            _TipoPago = "Efectivo"; 
+        }
+
+        private void rbTarjeta_CheckedChanged(object sender, EventArgs e)
+        {
+            _TipoPago = "Tarjeta";
+        }
+
     }
 }
