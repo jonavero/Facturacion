@@ -50,8 +50,8 @@ namespace CapaPresentacion.Consultas
         //Método BuscarFechas
         private void BuscarFechas()
         {
-            this.dataListado.DataSource = NVenta.BuscarFechas(this.dtFecha1.Value.ToString("MM/dd/yyyy"),
-                this.dtFecha2.Value.ToString("MM/dd/yyyy"));
+            this.dataListado.DataSource = NVenta.BuscarFechas(this.dtFecha1.Value.ToString("dd/MM/yyyy"),
+                this.dtFecha2.Value.ToString("dd/MM/yyyy"));
             this.OcultarColumnas();
             lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
         }

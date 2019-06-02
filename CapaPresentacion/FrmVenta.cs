@@ -113,7 +113,8 @@ namespace CapaPresentacion
             this.txtIgv.Text = "18";
             this.txtSerie.Text = "1318";
             this.txtCorrelativo.Text = "43387";
-            this.txtDescuento.Text = "0";
+            this.txtDescuento.Text = "";
+
             this.crearTabla();
             this.btnBuscarRNC.Enabled = false;
             _IdEmpresa = 1;

@@ -157,7 +157,7 @@
             this.txtIdarticulo.Location = new System.Drawing.Point(84, 22);
             this.txtIdarticulo.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdarticulo.Name = "txtIdarticulo";
-            this.txtIdarticulo.Size = new System.Drawing.Size(42, 20);
+            this.txtIdarticulo.Size = new System.Drawing.Size(52, 20);
             this.txtIdarticulo.TabIndex = 31;
             // 
             // label11
@@ -179,7 +179,6 @@
             this.txtCorrelativo.Name = "txtCorrelativo";
             this.txtCorrelativo.Size = new System.Drawing.Size(82, 20);
             this.txtCorrelativo.TabIndex = 25;
-            this.txtCorrelativo.Text = "43387";
             // 
             // label8
             // 
@@ -264,7 +263,6 @@
             this.txtSerie.Name = "txtSerie";
             this.txtSerie.Size = new System.Drawing.Size(46, 20);
             this.txtSerie.TabIndex = 11;
-            this.txtSerie.Text = "1318";
             // 
             // label6
             // 
@@ -556,7 +554,7 @@
             // 
             this.groupBox2.Controls.Add(this.rbEfectivo);
             this.groupBox2.Controls.Add(this.rbTarjeta);
-            this.groupBox2.Location = new System.Drawing.Point(302, 95);
+            this.groupBox2.Location = new System.Drawing.Point(30, 98);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(180, 63);
             this.groupBox2.TabIndex = 55;
@@ -600,7 +598,7 @@
             // lbEmpresaRNC
             // 
             this.lbEmpresaRNC.AutoSize = true;
-            this.lbEmpresaRNC.Location = new System.Drawing.Point(128, 142);
+            this.lbEmpresaRNC.Location = new System.Drawing.Point(682, 136);
             this.lbEmpresaRNC.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbEmpresaRNC.Name = "lbEmpresaRNC";
             this.lbEmpresaRNC.Size = new System.Drawing.Size(0, 13);
@@ -619,7 +617,7 @@
             // btnBuscarRNC
             // 
             this.btnBuscarRNC.Image = global::CapaPresentacion.Properties.Resources.Buscar_p;
-            this.btnBuscarRNC.Location = new System.Drawing.Point(241, 109);
+            this.btnBuscarRNC.Location = new System.Drawing.Point(795, 103);
             this.btnBuscarRNC.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarRNC.Name = "btnBuscarRNC";
             this.btnBuscarRNC.Size = new System.Drawing.Size(32, 25);
@@ -643,7 +641,7 @@
             // 
             this.txtEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtEmpresa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmpresa.Location = new System.Drawing.Point(100, 113);
+            this.txtEmpresa.Location = new System.Drawing.Point(654, 107);
             this.txtEmpresa.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmpresa.Name = "txtEmpresa";
             this.txtEmpresa.Size = new System.Drawing.Size(137, 20);
@@ -696,7 +694,6 @@
             this.txtDescuento.Name = "txtDescuento";
             this.txtDescuento.Size = new System.Drawing.Size(60, 20);
             this.txtDescuento.TabIndex = 44;
-            this.txtDescuento.Text = "0";
             // 
             // label14
             // 
@@ -816,7 +813,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(21, 115);
+            this.label18.Location = new System.Drawing.Point(575, 109);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(77, 13);

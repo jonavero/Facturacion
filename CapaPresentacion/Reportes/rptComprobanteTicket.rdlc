@@ -583,7 +583,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Fields!fecha.Value</Value>
+                <Value>=Fields!fecha.Value &amp;" "&amp; Globals!ExecutionTime.ToLongTimeString</Value>
                 <Style>
                   <FontSize>7pt</FontSize>
                   <Format>D</Format>
@@ -595,9 +595,9 @@
         </Paragraphs>
         <rd:DefaultName>fecha</rd:DefaultName>
         <Top>5.78442cm</Top>
-        <Left>2.86296cm</Left>
+        <Left>2.89295cm</Left>
         <Height>0.52944cm</Height>
-        <Width>4.54768cm</Width>
+        <Width>4.51768cm</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -628,9 +628,9 @@
         </Paragraphs>
         <rd:DefaultName>Trabajador</rd:DefaultName>
         <Top>6.49026cm</Top>
-        <Left>2.86296cm</Left>
+        <Left>2.9061cm</Left>
         <Height>0.49978cm</Height>
-        <Width>4.54767cm</Width>
+        <Width>4.50453cm</Width>
         <ZIndex>7</ZIndex>
         <Style>
           <Border>
@@ -1260,7 +1260,7 @@
         </Paragraphs>
         <rd:DefaultName>RNC</rd:DefaultName>
         <Top>2.90014cm</Top>
-        <Left>3.50268cm</Left>
+        <Left>3.53796cm</Left>
         <Height>0.6cm</Height>
         <Width>2.83654cm</Width>
         <ZIndex>25</ZIndex>
@@ -1381,7 +1381,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Tippo de Pago:</Value>
+                <Value>Tipo de Pago:</Value>
                 <Style>
                   <FontSize>7pt</FontSize>
                   <FontWeight>Bold</FontWeight>
@@ -1395,7 +1395,7 @@
         <Top>4.79637cm</Top>
         <Left>1.45444cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.38478cm</Width>
+        <Width>1.90713cm</Width>
         <ZIndex>29</ZIndex>
         <Style>
           <Border>
@@ -1425,9 +1425,9 @@
         </Paragraphs>
         <rd:DefaultName>tipo_pago</rd:DefaultName>
         <Top>4.80597cm</Top>
-        <Left>3.83922cm</Left>
+        <Left>3.53796cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>2.80126cm</Width>
         <ZIndex>30</ZIndex>
         <Style>
           <Border>
