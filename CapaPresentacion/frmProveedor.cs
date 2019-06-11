@@ -164,27 +164,29 @@ namespace CapaPresentacion
 
                 if (Opcion == DialogResult.OK)
                 {
-                    string Codigo;
+
                     string Rpta = "";
+                  
+                    int indeceFila = dataListado.CurrentRow.Index;
+                    
 
-                    foreach (DataGridViewRow row in dataListado.Rows)
+                    if (indeceFila != null)
                     {
-                        if (Convert.ToBoolean(row.Cells[0].Value))
+                        int idProveedor =Convert.ToInt32(dataListado.Rows[indeceFila].Cells[1].Value);
+
+                        Rpta = NProveedor.Eliminar(Convert.ToInt32(idProveedor));
+
+                        if (Rpta.Equals("OK"))
                         {
-                            Codigo = Convert.ToString(row.Cells[1].Value);
-                            Rpta = NProveedor.Eliminar(Convert.ToInt32(Codigo));
-
-                            if (Rpta.Equals("OK"))
-                            {
-                                this.MensajeOk("Se Eliminó Correctamente el registro");
-                            }
-                            else
-                            {
-                                this.MensajeError(Rpta);
-                            }
-
+                            this.MensajeOk("Se Eliminó Correctamente el registro");
                         }
+                        else
+                        {
+                            this.MensajeError(Rpta);
+                        }
+
                     }
+
                     this.Mostrar();
                 }
             }

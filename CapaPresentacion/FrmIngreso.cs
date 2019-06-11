@@ -220,27 +220,46 @@ namespace CapaPresentacion
 
                 if (Opcion == DialogResult.OK)
                 {
-                    string Codigo;
                     string Rpta = "";
 
-                    foreach (DataGridViewRow row in dataListado.Rows)
+                    int indeceFila = dataListado.CurrentRow.Index;
+
+
+                    if (indeceFila != null)
                     {
-                        if (Convert.ToBoolean(row.Cells[0].Value))
+                        int idIngreso = Convert.ToInt32(dataListado.Rows[indeceFila].Cells[1].Value);
+
+                        Rpta = NIngreso.Anular(Convert.ToInt32(idIngreso));
+
+                        if (Rpta.Equals("OK"))
                         {
-                            Codigo = Convert.ToString(row.Cells[1].Value);
-                            Rpta = NIngreso.Anular(Convert.ToInt32(Codigo));
-
-                            if (Rpta.Equals("OK"))
-                            {
-                                this.MensajeOk("Se Anuló Correctamente el Ingreso");
-                            }
-                            else
-                            {
-                                this.MensajeError(Rpta);
-                            }
-
+                            this.MensajeOk("Se Anuló Correctamente el Ingreso");
                         }
+                        else
+                        {
+                            this.MensajeError(Rpta);
+                        }
+
                     }
+
+                    //foreach (DataGridViewRow row in dataListado.Rows)
+                    //{
+                    //    if (Convert.ToBoolean(row.Cells[0].Value))
+                    //    {
+                    //        Codigo = Convert.ToString(row.Cells[1].Value);
+                    //        Rpta = NIngreso.Anular(Convert.ToInt32(Codigo));
+
+                    //        if (Rpta.Equals("OK"))
+                    //        {
+                    //            this.MensajeOk("Se Anuló Correctamente el Ingreso");
+                    //        }
+                    //        else
+                    //        {
+                    //            this.MensajeError(Rpta);
+                    //        }
+
+                    //    }
+                    //}
                     this.Mostrar();
                 }
             }

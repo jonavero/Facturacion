@@ -37,19 +37,31 @@ namespace CapaPresentacion
                     resta = 0;
                 }
 
+                
                 lbDevuelta.Text = resta.ToString("#0.00#");
+                if (lbDevuelta.Text == "0,00" && _Monto<_TotalPagar)
+                {
+                    btnCobrar.Enabled = false;
+                }
+                else { 
+                btnCobrar.Enabled = true;
+                }
             }
             catch 
             {
                 MessageBox.Show("Este campo solo permite números");
                 _Monto = 0;
+                txtMonto.Text = "";
+                btnCobrar.Enabled = false;
+
             }
-             
+
         }
 
         private void txtMonto_TextChanged(object sender, EventArgs e)
         {
             RealizarCalcDevuelta();
+
         }
 
         private void btnCobrar_Click(object sender, EventArgs e)
@@ -58,6 +70,11 @@ namespace CapaPresentacion
             venta.setMonto(_Monto);
             this.Hide();
 
+        }
+
+        private void FrmDevueltaFactura_Load(object sender, EventArgs e)
+        {
+            btnCobrar.Enabled = false;
         }
     }
 }

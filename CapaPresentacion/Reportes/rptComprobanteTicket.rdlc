@@ -6,16 +6,16 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.00145cm</Width>
+              <Width>1.82306cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.2935cm</Width>
+              <Width>0.93457cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.77623cm</Width>
+              <Width>1.34678cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.04767cm</Width>
+              <Width>1.51474cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -31,8 +31,9 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Descripción</Value>
+                              <Value>DESCRIP.</Value>
                               <Style>
+                                <FontFamily>Lucida Sans</FontFamily>
                                 <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -44,9 +45,14 @@
                       <rd:DefaultName>Textbox3</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                         </Border>
+                        <TopBorder>
+                          <Style>Dashed</Style>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Style>Dashed</Style>
+                        </BottomBorder>
                         <BackgroundColor>White</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -65,8 +71,9 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Cantidad</Value>
+                              <Value>CANT.</Value>
                               <Style>
+                                <FontFamily>Lucida Sans</FontFamily>
                                 <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -78,9 +85,14 @@
                       <rd:DefaultName>Textbox24</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                         </Border>
+                        <TopBorder>
+                          <Style>Dashed</Style>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Style>Dashed</Style>
+                        </BottomBorder>
                         <BackgroundColor>White</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -99,8 +111,9 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Valor Unidad</Value>
+                              <Value>PRECIO</Value>
                               <Style>
+                                <FontFamily>Lucida Sans</FontFamily>
                                 <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -112,9 +125,14 @@
                       <rd:DefaultName>Textbox5</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                         </Border>
+                        <TopBorder>
+                          <Style>Dashed</Style>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Style>Dashed</Style>
+                        </BottomBorder>
                         <BackgroundColor>White</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -133,8 +151,9 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Total Parcial</Value>
+                              <Value>TOTAL</Value>
                               <Style>
+                                <FontFamily>Lucida Sans</FontFamily>
                                 <FontSize>7pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -146,9 +165,14 @@
                       <rd:DefaultName>Textbox28</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                         </Border>
+                        <TopBorder>
+                          <Style>Dashed</Style>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Style>Dashed</Style>
+                        </BottomBorder>
                         <BackgroundColor>White</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -174,6 +198,7 @@
                             <TextRun>
                               <Value>=Fields!nombre.Value</Value>
                               <Style>
+                                <FontFamily>Lucida Sans</FontFamily>
                                 <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
@@ -185,7 +210,7 @@
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -206,6 +231,7 @@
                             <TextRun>
                               <Value>=Fields!cantidad.Value</Value>
                               <Style>
+                                <FontFamily>Lucida Sans</FontFamily>
                                 <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
@@ -217,7 +243,7 @@
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -238,7 +264,9 @@
                             <TextRun>
                               <Value>=Fields!precio_venta.Value</Value>
                               <Style>
+                                <FontFamily>Lucida Sans</FontFamily>
                                 <FontSize>7pt</FontSize>
+                                <Format>0.00;(0.00)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -249,7 +277,7 @@
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -270,7 +298,9 @@
                             <TextRun>
                               <Value>=Fields!Total_Parcial.Value</Value>
                               <Style>
+                                <FontFamily>Lucida Sans</FontFamily>
                                 <FontSize>7pt</FontSize>
+                                <Format>0.00;(0.00)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -281,7 +311,7 @@
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -307,7 +337,7 @@
           <TablixMembers>
             <TablixMember>
               <TablixHeader>
-                <Size>0.48916cm</Size>
+                <Size>0.58994cm</Size>
                 <CellContents>
                   <Textbox Name="Textbox30">
                     <CanGrow>true</CanGrow>
@@ -316,8 +346,9 @@
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>Id</Value>
+                            <Value>ID</Value>
                             <Style>
+                              <FontFamily>Lucida Sans</FontFamily>
                               <FontSize>7pt</FontSize>
                               <FontWeight>Bold</FontWeight>
                             </Style>
@@ -329,9 +360,14 @@
                     <rd:DefaultName>Textbox30</rd:DefaultName>
                     <Style>
                       <Border>
-                        <Color>LightGrey</Color>
-                        <Style>Solid</Style>
+                        <Style>None</Style>
                       </Border>
+                      <TopBorder>
+                        <Style>Dashed</Style>
+                      </TopBorder>
+                      <BottomBorder>
+                        <Style>Dashed</Style>
+                      </BottomBorder>
                       <BackgroundColor>White</BackgroundColor>
                       <PaddingLeft>2pt</PaddingLeft>
                       <PaddingRight>2pt</PaddingRight>
@@ -358,7 +394,7 @@
                 </SortExpression>
               </SortExpressions>
               <TablixHeader>
-                <Size>0.48916cm</Size>
+                <Size>0.58994cm</Size>
                 <CellContents>
                   <Textbox Name="idventa1">
                     <CanGrow>true</CanGrow>
@@ -369,6 +405,7 @@
                           <TextRun>
                             <Value>=Fields!idventa.Value</Value>
                             <Style>
+                              <FontFamily>Lucida Sans</FontFamily>
                               <FontSize>7pt</FontSize>
                             </Style>
                           </TextRun>
@@ -380,7 +417,7 @@
                     <Style>
                       <Border>
                         <Color>LightGrey</Color>
-                        <Style>Solid</Style>
+                        <Style>None</Style>
                       </Border>
                       <PaddingLeft>2pt</PaddingLeft>
                       <PaddingRight>2pt</PaddingRight>
@@ -399,14 +436,16 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>9.38624cm</Top>
-        <Left>0.40234cm</Left>
+        <Top>8.11624cm</Top>
+        <Left>0.53722cm</Left>
         <Height>1.2cm</Height>
-        <Width>7.60801cm</Width>
+        <Width>6.20909cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
+          <FontFamily>Lucida Sans</FontFamily>
+          <FontSize>8pt</FontSize>
         </Style>
       </Tablix>
       <Textbox Name="Cliente">
@@ -418,6 +457,7 @@
               <TextRun>
                 <Value>=Fields!Cliente.Value</Value>
                 <Style>
+                  <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
@@ -426,15 +466,15 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Cliente</rd:DefaultName>
-        <Top>7.06059cm</Top>
-        <Left>2.89824cm</Left>
-        <Height>0.55061cm</Height>
-        <Width>4.5124cm</Width>
+        <Top>6.35529cm</Top>
+        <Left>3.18272cm</Left>
+        <Height>0.4cm</Height>
+        <Width>3.03545cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
             <Color>LightGrey</Color>
-            <Style>Solid</Style>
+            <Style>None</Style>
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -451,6 +491,7 @@
               <TextRun>
                 <Value>Dirección:</Value>
                 <Style>
+                  <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>7pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
@@ -460,15 +501,15 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>8.47229cm</Top>
-        <Left>1.01207cm</Left>
-        <Height>0.43067cm</Height>
-        <Width>1.71764cm</Width>
+        <Top>7.29074cm</Top>
+        <Left>1.0108cm</Left>
+        <Height>0.4cm</Height>
+        <Width>1.65414cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
             <Color>LightGrey</Color>
-            <Style>Solid</Style>
+            <Style>None</Style>
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -485,6 +526,7 @@
               <TextRun>
                 <Value>Cliente:</Value>
                 <Style>
+                  <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>7pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
@@ -494,15 +536,15 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>7.13821cm</Top>
-        <Left>1.01207cm</Left>
-        <Height>0.473cm</Height>
+        <Top>6.33766cm</Top>
+        <Left>1.0108cm</Left>
+        <Height>0.4cm</Height>
         <Width>1.6745cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
             <Color>LightGrey</Color>
-            <Style>Solid</Style>
+            <Style>None</Style>
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -519,6 +561,7 @@
               <TextRun>
                 <Value>=Fields!num_documento.Value</Value>
                 <Style>
+                  <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
@@ -527,15 +570,15 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>num_documento</rd:DefaultName>
-        <Top>7.7876cm</Top>
-        <Left>2.9061cm</Left>
-        <Height>0.473cm</Height>
-        <Width>4.50453cm</Width>
+        <Top>6.8283cm</Top>
+        <Left>3.19058cm</Left>
+        <Height>0.4cm</Height>
+        <Width>3.02759cm</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
             <Color>LightGrey</Color>
-            <Style>Solid</Style>
+            <Style>None</Style>
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -552,6 +595,7 @@
               <TextRun>
                 <Value>=Fields!direccion.Value</Value>
                 <Style>
+                  <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
@@ -560,15 +604,15 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>direccion</rd:DefaultName>
-        <Top>8.43699cm</Top>
-        <Left>2.9061cm</Left>
-        <Height>0.43067cm</Height>
-        <Width>4.50453cm</Width>
+        <Top>7.28719cm</Top>
+        <Left>3.21527cm</Left>
+        <Height>0.4cm</Height>
+        <Width>3.03465cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
             <Color>LightGrey</Color>
-            <Style>Solid</Style>
+            <Style>None</Style>
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -585,6 +629,7 @@
               <TextRun>
                 <Value>=Fields!fecha.Value &amp;" "&amp; Globals!ExecutionTime.ToLongTimeString</Value>
                 <Style>
+                  <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>7pt</FontSize>
                   <Format>D</Format>
                 </Style>
@@ -594,15 +639,15 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>fecha</rd:DefaultName>
-        <Top>5.78442cm</Top>
-        <Left>2.89295cm</Left>
-        <Height>0.52944cm</Height>
-        <Width>4.51768cm</Width>
+        <Top>5.42837cm</Top>
+        <Left>3.17743cm</Left>
+        <Height>0.4cm</Height>
+        <Width>3.04074cm</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
             <Color>LightGrey</Color>
-            <Style>Solid</Style>
+            <Style>None</Style>
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -619,6 +664,7 @@
               <TextRun>
                 <Value>=Fields!Trabajador.Value</Value>
                 <Style>
+                  <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
@@ -627,15 +673,15 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Trabajador</rd:DefaultName>
-        <Top>6.49026cm</Top>
-        <Left>2.9061cm</Left>
-        <Height>0.49978cm</Height>
-        <Width>4.50453cm</Width>
+        <Top>5.88021cm</Top>
+        <Left>3.19058cm</Left>
+        <Height>0.4cm</Height>
+        <Width>3.02759cm</Width>
         <ZIndex>7</ZIndex>
         <Style>
           <Border>
             <Color>LightGrey</Color>
-            <Style>Solid</Style>
+            <Style>None</Style>
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -652,7 +698,9 @@
               <TextRun>
                 <Value>=sum(Fields!Total_Parcial.Value)-sum(Fields!Total_Parcial.Value)*Fields!igv.Value/100</Value>
                 <Style>
+                  <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>7pt</FontSize>
+                  <Format>0.00;(0.00)</Format>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -660,15 +708,15 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Total_Parcial1</rd:DefaultName>
-        <Top>10.6568cm</Top>
-        <Left>4.18645cm</Left>
-        <Height>0.6cm</Height>
+        <Top>9.67663cm</Top>
+        <Left>3.23597cm</Left>
+        <Height>0.4cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>8</ZIndex>
         <Style>
           <Border>
             <Color>LightGrey</Color>
-            <Style>Solid</Style>
+            <Style>None</Style>
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -685,7 +733,9 @@
               <TextRun>
                 <Value>=sum(Fields!Total_Parcial.Value)*Fields!igv.Value/100</Value>
                 <Style>
+                  <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>7pt</FontSize>
+                  <Format>0.00;(0.00)</Format>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -693,15 +743,15 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Total_Parcial2</rd:DefaultName>
-        <Top>11.43319cm</Top>
-        <Left>4.18645cm</Left>
-        <Height>0.45183cm</Height>
+        <Top>10.13552cm</Top>
+        <Left>3.23597cm</Left>
+        <Height>0.4cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>9</ZIndex>
         <Style>
           <Border>
             <Color>LightGrey</Color>
-            <Style>Solid</Style>
+            <Style>None</Style>
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -718,7 +768,10 @@
               <TextRun>
                 <Value>=sum(Fields!Total_Parcial.Value)</Value>
                 <Style>
+                  <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>7pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <Format>0.00;(0.00)</Format>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -726,15 +779,15 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Total_Parcial3</rd:DefaultName>
-        <Top>12.06141cm</Top>
-        <Left>4.18645cm</Left>
-        <Height>0.6cm</Height>
+        <Top>10.57785cm</Top>
+        <Left>3.21833cm</Left>
+        <Height>0.4cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>10</ZIndex>
         <Style>
           <Border>
             <Color>LightGrey</Color>
-            <Style>Solid</Style>
+            <Style>None</Style>
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -749,8 +802,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Total a Pagar:</Value>
+                <Value>Total:</Value>
                 <Style>
+                  <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>7pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
@@ -760,10 +814,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox45</rd:DefaultName>
-        <Top>12.06141cm</Top>
-        <Left>1.51006cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Top>10.57324cm</Top>
+        <Left>1.03583cm</Left>
+        <Height>0.4cm</Height>
+        <Width>1.78739cm</Width>
         <ZIndex>11</ZIndex>
         <Style>
           <Border>
@@ -782,8 +836,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Total Parcial:</Value>
+                <Value>Subtotal:</Value>
                 <Style>
+                  <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>7pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
@@ -793,10 +848,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox45</rd:DefaultName>
-        <Top>10.6568cm</Top>
-        <Left>1.51006cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Top>9.74013cm</Top>
+        <Left>1.03583cm</Left>
+        <Height>0.4cm</Height>
+        <Width>1.59736cm</Width>
         <ZIndex>12</ZIndex>
         <Style>
           <Border>
@@ -815,8 +870,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Impuesto:</Value>
+                <Value>Itbis:</Value>
                 <Style>
+                  <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>7pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
@@ -826,10 +882,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox45</rd:DefaultName>
-        <Top>11.43319cm</Top>
-        <Left>1.51006cm</Left>
-        <Height>0.45183cm</Height>
-        <Width>2.5cm</Width>
+        <Top>10.13552cm</Top>
+        <Left>1.03583cm</Left>
+        <Height>0.4cm</Height>
+        <Width>1.59736cm</Width>
         <ZIndex>13</ZIndex>
         <Style>
           <Border>
@@ -850,6 +906,7 @@
               <TextRun>
                 <Value>Documento:</Value>
                 <Style>
+                  <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>7pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
@@ -859,15 +916,15 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>7.8229cm</Top>
-        <Left>1.01207cm</Left>
-        <Height>0.473cm</Height>
+        <Top>6.83185cm</Top>
+        <Left>1.0108cm</Left>
+        <Height>0.4cm</Height>
         <Width>1.6745cm</Width>
         <ZIndex>14</ZIndex>
         <Style>
           <Border>
             <Color>LightGrey</Color>
-            <Style>Solid</Style>
+            <Style>None</Style>
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -884,6 +941,7 @@
               <TextRun>
                 <Value>Cajero:</Value>
                 <Style>
+                  <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>7pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
@@ -893,15 +951,15 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>6.49026cm</Top>
-        <Left>1.01207cm</Left>
-        <Height>0.473cm</Height>
+        <Top>5.88021cm</Top>
+        <Left>1.0108cm</Left>
+        <Height>0.4cm</Height>
         <Width>1.6745cm</Width>
         <ZIndex>15</ZIndex>
         <Style>
           <Border>
             <Color>LightGrey</Color>
-            <Style>Solid</Style>
+            <Style>None</Style>
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -918,6 +976,7 @@
               <TextRun>
                 <Value>Fecha:</Value>
                 <Style>
+                  <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>7pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
@@ -927,15 +986,15 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>5.78442cm</Top>
-        <Left>1.01207cm</Left>
-        <Height>0.473cm</Height>
+        <Top>5.42837cm</Top>
+        <Left>1.0108cm</Left>
+        <Height>0.4cm</Height>
         <Width>1.6745cm</Width>
         <ZIndex>16</ZIndex>
         <Style>
           <Border>
             <Color>LightGrey</Color>
-            <Style>Solid</Style>
+            <Style>None</Style>
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -943,18 +1002,6 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Line Name="Line1">
-        <Top>9.08639cm</Top>
-        <Left>1.01207cm</Left>
-        <Height>0cm</Height>
-        <Width>6.39856cm</Width>
-        <ZIndex>17</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-        </Style>
-      </Line>
       <Textbox Name="Textbox22">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
@@ -962,11 +1009,11 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>FARMACIA PINTO SRL</Value>
+                <Value>FARMACIA PINTO, SRL</Value>
                 <Style>
-                  <FontSize>16pt</FontSize>
+                  <FontFamily>Lucida Sans</FontFamily>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
-                  <Color>Blue</Color>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -976,11 +1023,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox21</rd:DefaultName>
-        <Top>0.33942cm</Top>
-        <Left>0.8915cm</Left>
-        <Height>0.87407cm</Height>
-        <Width>7.04829cm</Width>
-        <ZIndex>18</ZIndex>
+        <Top>0.49816cm</Top>
+        <Left>0.98767cm</Left>
+        <Height>0.60949cm</Height>
+        <Width>5.75864cm</Width>
+        <ZIndex>17</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1000,10 +1047,9 @@
               <TextRun>
                 <Value>RNC. 131-843387</Value>
                 <Style>
-                  <FontFamily>Tahoma</FontFamily>
+                  <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>8pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                  <Color>Red</Color>
+                  <FontWeight>Normal</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -1014,12 +1060,26 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Calle Jose Marti #4</Value>
+                <Value>Calle Jose Marti #2</Value>
                 <Style>
-                  <FontFamily>Tahoma</FontFamily>
+                  <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>8pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                  <Color>Red</Color>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Urb. Maximo Gomez,</Value>
+                <Style>
+                  <FontFamily>Lucida Sans</FontFamily>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -1032,10 +1092,9 @@
               <TextRun>
                 <Value>Villa Mella Santo Domingo</Value>
                 <Style>
-                  <FontFamily>Tahoma</FontFamily>
+                  <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>8pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                  <Color>Red</Color>
+                  <FontWeight>Normal</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -1048,10 +1107,9 @@
               <TextRun>
                 <Value>Tel: 809-692-7867</Value>
                 <Style>
-                  <FontFamily>Tahoma</FontFamily>
+                  <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>8pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                  <Color>Red</Color>
+                  <FontWeight>Normal</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -1061,11 +1119,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox23</rd:DefaultName>
-        <Top>1.3546cm</Top>
-        <Left>1.01207cm</Left>
-        <Height>1.36915cm</Height>
-        <Width>6.6508cm</Width>
-        <ZIndex>19</ZIndex>
+        <Top>1.28404cm</Top>
+        <Left>1.02295cm</Left>
+        <Height>1.82776cm</Height>
+        <Width>5.72336cm</Width>
+        <ZIndex>18</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1083,8 +1141,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Comprobante:</Value>
+                <Value>NCF.:</Value>
                 <Style>
+                  <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>7pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
@@ -1094,11 +1153,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>4.16074cm</Top>
-        <Left>1.45444cm</Left>
-        <Height>0.6cm</Height>
-        <Width>1.90713cm</Width>
-        <ZIndex>20</ZIndex>
+        <Top>4.12546cm</Top>
+        <Left>1.04764cm</Left>
+        <Height>0.4cm</Height>
+        <Width>0.88408cm</Width>
+        <ZIndex>19</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1116,8 +1175,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Nombre Emp.:</Value>
+                <Value>NCF.:</Value>
                 <Style>
+                  <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>7pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
@@ -1127,11 +1187,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
-        <Top>3.57069cm</Top>
-        <Left>1.48972cm</Left>
-        <Height>0.6cm</Height>
-        <Width>1.90713cm</Width>
-        <ZIndex>21</ZIndex>
+        <Top>3.69416cm</Top>
+        <Left>1.05117cm</Left>
+        <Height>0.39cm</Height>
+        <Width>0.8488cm</Width>
+        <ZIndex>20</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1151,6 +1211,7 @@
               <TextRun>
                 <Value>=First(Fields!NCF.Value, "DataSet1")</Value>
                 <Style>
+                  <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>7pt</FontSize>
                   <Format>D</Format>
                 </Style>
@@ -1160,15 +1221,15 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>NCF</rd:DefaultName>
-        <Top>4.17069cm</Top>
-        <Left>3.53796cm</Left>
-        <Height>0.6cm</Height>
+        <Top>4.13541cm</Top>
+        <Left>3.22641cm</Left>
+        <Height>0.4cm</Height>
         <Width>2.80126cm</Width>
-        <ZIndex>22</ZIndex>
+        <ZIndex>21</ZIndex>
         <Style>
           <Border>
             <Color>LightGrey</Color>
-            <Style>Solid</Style>
+            <Style>None</Style>
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -1183,8 +1244,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>RNC:</Value>
+                <Value>RNC.:</Value>
                 <Style>
+                  <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>7pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
@@ -1194,11 +1256,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
-        <Top>3.07653cm</Top>
-        <Left>2.04988cm</Left>
-        <Height>0.42361cm</Height>
-        <Width>0.98109cm</Width>
-        <ZIndex>23</ZIndex>
+        <Top>3.28819cm</Top>
+        <Left>1.04764cm</Left>
+        <Height>0.4cm</Height>
+        <Width>0.88408cm</Width>
+        <ZIndex>22</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1218,6 +1280,7 @@
               <TextRun>
                 <Value>=First(Fields!nombreEmp.Value, "DataSet1")</Value>
                 <Style>
+                  <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
@@ -1226,15 +1289,15 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>nombreEmp</rd:DefaultName>
-        <Top>3.50014cm</Top>
-        <Left>3.53796cm</Left>
-        <Height>0.6cm</Height>
+        <Top>3.66594cm</Top>
+        <Left>3.22641cm</Left>
+        <Height>0.4cm</Height>
         <Width>2.80126cm</Width>
-        <ZIndex>24</ZIndex>
+        <ZIndex>23</ZIndex>
         <Style>
           <Border>
             <Color>LightGrey</Color>
-            <Style>Solid</Style>
+            <Style>None</Style>
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -1251,6 +1314,7 @@
               <TextRun>
                 <Value>=First(Fields!RNC.Value, "DataSet1")</Value>
                 <Style>
+                  <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
@@ -1259,15 +1323,15 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>RNC</rd:DefaultName>
-        <Top>2.90014cm</Top>
-        <Left>3.53796cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.83654cm</Width>
-        <ZIndex>25</ZIndex>
+        <Top>3.25644cm</Top>
+        <Left>3.21583cm</Left>
+        <Height>0.4cm</Height>
+        <Width>2.78009cm</Width>
+        <ZIndex>24</ZIndex>
         <Style>
           <Border>
             <Color>LightGrey</Color>
-            <Style>Solid</Style>
+            <Style>None</Style>
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -1293,11 +1357,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
-        <Top>14.29456cm</Top>
-        <Left>1.51006cm</Left>
-        <Height>0.42361cm</Height>
-        <Width>5.70302cm</Width>
-        <ZIndex>26</ZIndex>
+        <Top>12.44411cm</Top>
+        <Left>1.03583cm</Left>
+        <Height>0.4cm</Height>
+        <Width>5.04898cm</Width>
+        <ZIndex>25</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1317,6 +1381,7 @@
               <TextRun>
                 <Value>=Fields!monto_pagado.Value</Value>
                 <Style>
+                  <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
@@ -1325,15 +1390,15 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>monto_pagado</rd:DefaultName>
-        <Top>12.80252cm</Top>
-        <Left>4.18645cm</Left>
-        <Height>0.6cm</Height>
+        <Top>11.2826cm</Top>
+        <Left>3.23597cm</Left>
+        <Height>0.4cm</Height>
         <Width>2.5cm</Width>
-        <ZIndex>27</ZIndex>
+        <ZIndex>26</ZIndex>
         <Style>
           <Border>
             <Color>LightGrey</Color>
-            <Style>Solid</Style>
+            <Style>None</Style>
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -1348,8 +1413,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Monto Pagado</Value>
+                <Value>Monto Pagado:</Value>
                 <Style>
+                  <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>7pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
@@ -1359,11 +1425,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox45</rd:DefaultName>
-        <Top>12.76724cm</Top>
-        <Left>1.51006cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
-        <ZIndex>28</ZIndex>
+        <Top>11.31082cm</Top>
+        <Left>1.03583cm</Left>
+        <Height>0.4cm</Height>
+        <Width>2cm</Width>
+        <ZIndex>27</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1383,6 +1449,7 @@
               <TextRun>
                 <Value>Tipo de Pago:</Value>
                 <Style>
+                  <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>7pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
@@ -1392,11 +1459,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>4.79637cm</Top>
-        <Left>1.45444cm</Left>
-        <Height>0.6cm</Height>
-        <Width>1.90713cm</Width>
-        <ZIndex>29</ZIndex>
+        <Top>4.66584cm</Top>
+        <Left>1.04764cm</Left>
+        <Height>0.4cm</Height>
+        <Width>1.79766cm</Width>
+        <ZIndex>28</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1416,6 +1483,7 @@
               <TextRun>
                 <Value>=First(Fields!tipo_pago.Value, "DataSet1")</Value>
                 <Style>
+                  <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
@@ -1424,15 +1492,15 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>tipo_pago</rd:DefaultName>
-        <Top>4.80597cm</Top>
-        <Left>3.53796cm</Left>
-        <Height>0.6cm</Height>
+        <Top>4.64369cm</Top>
+        <Left>3.22641cm</Left>
+        <Height>0.4cm</Height>
         <Width>2.80126cm</Width>
-        <ZIndex>30</ZIndex>
+        <ZIndex>29</ZIndex>
         <Style>
           <Border>
             <Color>LightGrey</Color>
-            <Style>Solid</Style>
+            <Style>None</Style>
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -1449,6 +1517,7 @@
               <TextRun>
                 <Value>Devuelta:</Value>
                 <Style>
+                  <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>7pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
@@ -1458,11 +1527,11 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox45</rd:DefaultName>
-        <Top>13.51817cm</Top>
-        <Left>1.51006cm</Left>
-        <Height>0.46771cm</Height>
-        <Width>2.5cm</Width>
-        <ZIndex>31</ZIndex>
+        <Top>11.776cm</Top>
+        <Left>1.03583cm</Left>
+        <Height>0.4cm</Height>
+        <Width>1.9365cm</Width>
+        <ZIndex>30</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1483,7 +1552,9 @@
                 <Label>total_devolucion</Label>
                 <Value>=Fields!monto_pagado.Value - Sum(Fields!Total_Parcial.Value, "DataSet1")</Value>
                 <Style>
+                  <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>7pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
                   <Format>0.00;(0.00)</Format>
                 </Style>
               </TextRun>
@@ -1492,15 +1563,15 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>monto_pagado</rd:DefaultName>
-        <Top>13.54363cm</Top>
-        <Left>4.18645cm</Left>
-        <Height>0.44224cm</Height>
+        <Top>11.70621cm</Top>
+        <Left>3.23597cm</Left>
+        <Height>0.4cm</Height>
         <Width>2.5cm</Width>
-        <ZIndex>32</ZIndex>
+        <ZIndex>31</ZIndex>
         <Style>
           <Border>
             <Color>LightGrey</Color>
-            <Style>Solid</Style>
+            <Style>None</Style>
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
@@ -1508,11 +1579,24 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
+      <Line Name="Line2">
+        <Top>11.1887cm</Top>
+        <Left>5.76474cm</Left>
+        <Height>0cm</Height>
+        <Width>-4.74179cm</Width>
+        <ZIndex>32</ZIndex>
+        <Style>
+          <Border>
+            <Style>Dashed</Style>
+            <Width>1.5pt</Width>
+          </Border>
+        </Style>
+      </Line>
     </ReportItems>
-    <Height>6.00289in</Height>
+    <Height>5.21122in</Height>
     <Style />
   </Body>
-  <Width>3.53509in</Width>
+  <Width>3.17051in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>

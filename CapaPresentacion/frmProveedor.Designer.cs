@@ -242,10 +242,9 @@
             // 
             this.cbTipo_Documento.FormattingEnabled = true;
             this.cbTipo_Documento.Items.AddRange(new object[] {
+            "RNC",
             "CEDULA",
-            "RUC",
-            "PASS",
-            "RNC"});
+            "PASS"});
             this.cbTipo_Documento.Location = new System.Drawing.Point(116, 100);
             this.cbTipo_Documento.Margin = new System.Windows.Forms.Padding(2);
             this.cbTipo_Documento.Name = "cbTipo_Documento";

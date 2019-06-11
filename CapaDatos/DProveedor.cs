@@ -339,7 +339,7 @@ namespace CapaDatos
             }
             catch (Exception ex)
             {
-                rpta = ex.Message;
+                rpta = "No se puede eliminar el proveedor, porque esta atado a multiples compras";
             }
             finally
             {

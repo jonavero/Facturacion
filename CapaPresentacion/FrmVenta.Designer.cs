@@ -144,7 +144,7 @@
             // 
             this.txtPrecio_Venta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtPrecio_Venta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPrecio_Venta.Location = new System.Drawing.Point(434, 68);
+            this.txtPrecio_Venta.Location = new System.Drawing.Point(445, 32);
             this.txtPrecio_Venta.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrecio_Venta.Name = "txtPrecio_Venta";
             this.txtPrecio_Venta.Size = new System.Drawing.Size(94, 20);
@@ -208,7 +208,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(359, 73);
+            this.label13.Location = new System.Drawing.Point(370, 37);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(71, 13);
@@ -316,11 +316,12 @@
             // 
             this.txtPrecio_Compra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtPrecio_Compra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPrecio_Compra.Location = new System.Drawing.Point(434, 25);
+            this.txtPrecio_Compra.Location = new System.Drawing.Point(638, 60);
             this.txtPrecio_Compra.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrecio_Compra.Name = "txtPrecio_Compra";
             this.txtPrecio_Compra.Size = new System.Drawing.Size(94, 20);
             this.txtPrecio_Compra.TabIndex = 35;
+            this.txtPrecio_Compra.Visible = false;
             // 
             // tabControl1
             // 
@@ -671,7 +672,7 @@
             this.gbNCF.Margin = new System.Windows.Forms.Padding(2);
             this.gbNCF.Name = "gbNCF";
             this.gbNCF.Padding = new System.Windows.Forms.Padding(2);
-            this.gbNCF.Size = new System.Drawing.Size(876, 120);
+            this.gbNCF.Size = new System.Drawing.Size(876, 109);
             this.gbNCF.TabIndex = 28;
             this.gbNCF.TabStop = false;
             // 
@@ -689,16 +690,16 @@
             // 
             this.txtDescuento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtDescuento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDescuento.Location = new System.Drawing.Point(630, 71);
+            this.txtDescuento.Location = new System.Drawing.Point(446, 69);
             this.txtDescuento.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescuento.Name = "txtDescuento";
-            this.txtDescuento.Size = new System.Drawing.Size(60, 20);
+            this.txtDescuento.Size = new System.Drawing.Size(77, 20);
             this.txtDescuento.TabIndex = 44;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(563, 75);
+            this.label14.Location = new System.Drawing.Point(379, 73);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(62, 13);
@@ -740,12 +741,13 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(351, 26);
+            this.label12.Location = new System.Drawing.Point(555, 61);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(79, 13);
             this.label12.TabIndex = 34;
             this.label12.Text = "Precio Compra:";
+            this.label12.Visible = false;
             // 
             // txtCantidad
             // 

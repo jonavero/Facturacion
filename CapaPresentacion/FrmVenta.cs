@@ -108,12 +108,11 @@ namespace CapaPresentacion
             this.txtCliente.Text = string.Empty;
             this.txtSerie.Text = string.Empty;
             this.txtCorrelativo.Text = string.Empty;
-            this.txtIgv.Text = string.Empty;
             this.lblTotal_Pagado.Text = "0,0";
-            this.txtIgv.Text = "18";
+            this.txtIgv.Text = "0";
             this.txtSerie.Text = "1318";
             this.txtCorrelativo.Text = "43387";
-            this.txtDescuento.Text = "";
+            this.txtDescuento.Text = "0";
 
             this.crearTabla();
             this.btnBuscarRNC.Enabled = false;
@@ -132,7 +131,7 @@ namespace CapaPresentacion
             this.txtCantidad.Text = string.Empty;
             this.txtPrecio_Compra.Text = string.Empty;
             this.txtPrecio_Venta.Text = string.Empty;
-            this.txtDescuento.Text = string.Empty;
+            this.txtDescuento.Text = "0";
             this.txtStock_Actual.BackColor = Color.FromArgb(255, 192, 128);
 
         }

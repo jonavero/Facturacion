@@ -152,6 +152,7 @@
             this.Name = "FrmDevueltaFactura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmDevueltaFactura";
+            this.Load += new System.EventHandler(this.FrmDevueltaFactura_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
