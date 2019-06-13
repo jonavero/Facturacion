@@ -585,5 +585,12 @@ namespace CapaPresentacion
             _TipoPago = "Tarjeta";
         }
 
+        private void FrmVenta_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData ==Keys.Enter)
+            {
+                SendKeys.Send("{TAB}");
+            }
+        }
     }
 }

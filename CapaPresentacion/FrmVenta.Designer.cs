@@ -928,11 +928,13 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmVenta";
             this.Text = ".:: Mantenimiento de Ventas ::.";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmVenta_FormClosing);
             this.Load += new System.EventHandler(this.FrmVenta_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmVenta_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
