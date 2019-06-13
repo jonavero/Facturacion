@@ -37,6 +37,7 @@ namespace CapaNegocio
                 detalle.Cantidad = Convert.ToInt32(row["cantidad"].ToString());
                 detalle.Precio_Venta = Convert.ToDecimal(row["precio_venta"].ToString());
                 detalle.Descuento = Convert.ToDecimal(row["descuento"].ToString());
+                detalle.ITBIS = Convert.ToInt32(row["impuesto"].ToString());
                 detalles.Add(detalle);
             }
             return Obj.Insertar(Obj, detalles);

@@ -17,6 +17,7 @@ namespace CapaDatos
         private int _Cantidad;
         private decimal _Precio_Venta;
         private decimal _Descuento;
+        private int _ITBIS;
         //Propiedades
         public int Iddetalle_venta
         {
@@ -57,6 +58,12 @@ namespace CapaDatos
             set { _Descuento = value; }
         }
 
+        public int ITBIS
+        {
+            get { return _ITBIS; }
+            set { _ITBIS = value; }
+        }
+
         //Constructores
         public DDetalle_Venta()
         {
@@ -64,7 +71,7 @@ namespace CapaDatos
         }
 
         public DDetalle_Venta(int iddetalle_venta,int idventa,int iddetalle_ingreso,
-            int cantidad,decimal precio_venta,decimal descuento)
+            int cantidad,decimal precio_venta,decimal descuento, int itbis)
         {
             this.Iddetalle_venta = iddetalle_venta;
             this.Idventa = idventa;
@@ -72,6 +79,7 @@ namespace CapaDatos
             this.Cantidad = cantidad;
             this.Precio_Venta = precio_venta;
             this.Descuento = descuento;
+            this.ITBIS = itbis;
         }
 
         //Método Insertar
@@ -124,6 +132,12 @@ namespace CapaDatos
                 ParDescuento.SqlDbType = SqlDbType.Money;
                 ParDescuento.Value = Detalle_Venta.Descuento;
                 SqlCmd.Parameters.Add(ParDescuento);
+
+                SqlParameter ParITBIS = new SqlParameter();
+                ParITBIS.ParameterName = "@itbis_pro";
+                ParITBIS.SqlDbType = SqlDbType.Int;
+                ParITBIS.Value = Detalle_Venta.ITBIS;
+                SqlCmd.Parameters.Add(ParITBIS);
 
                 //Ejecutamos nuestro comando
 

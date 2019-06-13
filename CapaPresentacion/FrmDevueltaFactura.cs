@@ -39,7 +39,7 @@ namespace CapaPresentacion
 
                 
                 lbDevuelta.Text = resta.ToString("#0.00#");
-                if (lbDevuelta.Text == "0,00" && _Monto<_TotalPagar)
+                if (lbDevuelta.Text == "0.00" && _Monto<_TotalPagar)
                 {
                     btnCobrar.Enabled = false;
                 }

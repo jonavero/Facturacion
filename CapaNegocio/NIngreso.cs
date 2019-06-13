@@ -35,6 +35,7 @@ namespace CapaNegocio
                 detalle.Stock_Actual = Convert.ToInt32(row["stock_inicial"].ToString());
                 detalle.Fecha_Produccion = Convert.ToDateTime(row["fecha_produccion"].ToString());
                 detalle.Fecha_Vencimiento = Convert.ToDateTime(row["fecha_vencimiento"].ToString());
+                detalle.ITBIS = Convert.ToInt32(row["impuesto"].ToString());
                 detalles.Add(detalle);
             }
             return Obj.Insertar(Obj,detalles);
@@ -53,6 +54,11 @@ namespace CapaNegocio
             return new DIngreso().Mostrar();
         }
 
+        public static DataTable MostrarPorNombre(string nombre)
+        {
+            return new DIngreso().MostrarPorNombre(nombre);
+        }
+
         //Método BuscarFecha que llama al método BuscarNombre
         //de la clase DIngreso de la CapaDatos
 
@@ -67,5 +73,24 @@ namespace CapaNegocio
             DIngreso Obj = new DIngreso();
             return Obj.MostrarDetalle(textobuscar);
         }
+
+        public static string ModificarDetalle(int iddetalle_ingreso, int idarticulo,
+            string nombre, decimal precio_compra, decimal precio_venta,
+            int stock_inicial, DateTime fecha_produccion,
+            DateTime fecha_vencimiento, int itbis)
+        {
+            DDetalle_Ingreso dDetalle_Ingreso = new DDetalle_Ingreso();
+            dDetalle_Ingreso.Iddetalle_Ingreso = iddetalle_ingreso;
+            dDetalle_Ingreso.Idarticulo = idarticulo;
+            dDetalle_Ingreso.Nombre = nombre;
+            dDetalle_Ingreso.Precio_Compra = precio_compra;
+            dDetalle_Ingreso.Precio_Venta = precio_venta;
+            dDetalle_Ingreso.Stock_Inicial = stock_inicial;
+            dDetalle_Ingreso.Fecha_Produccion = fecha_produccion;
+            dDetalle_Ingreso.Fecha_Vencimiento = fecha_vencimiento;
+            dDetalle_Ingreso.ITBIS = itbis;
+            return dDetalle_Ingreso.ModificarIngreso(dDetalle_Ingreso);
+        }
+
     }
 }

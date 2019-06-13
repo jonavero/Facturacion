@@ -66,7 +66,7 @@ namespace CapaPresentacion
             FrmVenta form = FrmVenta.GetInstancia();
             string par1, par2;
             decimal par3, par4;
-            int par5;
+            int par5, par7;
             DateTime par6;
             par1 = Convert.ToString(this.dataListado.CurrentRow.Cells["iddetalle_ingreso"].Value);
             par2 = Convert.ToString(this.dataListado.CurrentRow.Cells["nombre"].Value);
@@ -74,7 +74,8 @@ namespace CapaPresentacion
             par4 = Convert.ToDecimal(this.dataListado.CurrentRow.Cells["precio_venta"].Value);
             par5 = Convert.ToInt32(this.dataListado.CurrentRow.Cells["stock_actual"].Value);
             par6 = Convert.ToDateTime(this.dataListado.CurrentRow.Cells["fecha_vencimiento"].Value);
-            form.setArticulo(par1, par2, par3, par4, par5, par6);
+            par7 = Convert.ToInt32(this.dataListado.CurrentRow.Cells["itbis_pro"].Value); 
+            form.setArticulo(par1, par2, par3, par4, par5, par6, par7);
             this.Hide();
         }
 

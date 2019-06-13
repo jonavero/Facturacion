@@ -321,6 +321,8 @@ namespace CapaPresentacion {
             
             private global::System.Data.DataColumn columntipo_pago;
             
+            private global::System.Data.DataColumn columnitbis;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public spreporte_facturaDataTable() {
@@ -524,6 +526,14 @@ namespace CapaPresentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn itbisColumn {
+                get {
+                    return this.columnitbis;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -579,7 +589,8 @@ namespace CapaPresentacion {
                         string nombreEmp, 
                         string RNC, 
                         decimal monto_pagado, 
-                        string tipo_pago) {
+                        string tipo_pago, 
+                        decimal itbis) {
                 spreporte_facturaRow rowspreporte_facturaRow = ((spreporte_facturaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -602,7 +613,8 @@ namespace CapaPresentacion {
                         nombreEmp,
                         RNC,
                         monto_pagado,
-                        tipo_pago};
+                        tipo_pago,
+                        itbis};
                 rowspreporte_facturaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowspreporte_facturaRow);
                 return rowspreporte_facturaRow;
@@ -653,6 +665,7 @@ namespace CapaPresentacion {
                 this.columnRNC = base.Columns["RNC"];
                 this.columnmonto_pagado = base.Columns["monto_pagado"];
                 this.columntipo_pago = base.Columns["tipo_pago"];
+                this.columnitbis = base.Columns["itbis"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -700,6 +713,8 @@ namespace CapaPresentacion {
                 base.Columns.Add(this.columnmonto_pagado);
                 this.columntipo_pago = new global::System.Data.DataColumn("tipo_pago", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntipo_pago);
+                this.columnitbis = new global::System.Data.DataColumn("itbis", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnitbis);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidventa}, true));
                 this.columnidventa.AutoIncrement = true;
@@ -732,6 +747,7 @@ namespace CapaPresentacion {
                 this.columnnombreEmp.MaxLength = 75;
                 this.columnRNC.MaxLength = 50;
                 this.columntipo_pago.MaxLength = 25;
+                this.columnitbis.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1155,6 +1171,22 @@ namespace CapaPresentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal itbis {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablespreporte_factura.itbisColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'itbis\' in table \'spreporte_factura\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespreporte_factura.itbisColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsTrabajadorNull() {
                 return this.IsNull(this.tablespreporte_factura.TrabajadorColumn);
             }
@@ -1271,6 +1303,18 @@ namespace CapaPresentacion {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Settipo_pagoNull() {
                 this[this.tablespreporte_factura.tipo_pagoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsitbisNull() {
+                return this.IsNull(this.tablespreporte_factura.itbisColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetitbisNull() {
+                this[this.tablespreporte_factura.itbisColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1454,6 +1498,7 @@ namespace CapaPresentacion.DataSet3TableAdapters {
             tableMapping.ColumnMappings.Add("RNC", "RNC");
             tableMapping.ColumnMappings.Add("monto_pagado", "monto_pagado");
             tableMapping.ColumnMappings.Add("tipo_pago", "tipo_pago");
+            tableMapping.ColumnMappings.Add("itbis", "itbis");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

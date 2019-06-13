@@ -20,6 +20,7 @@ namespace CapaPresentacion
         private DataTable dtDetalle;
         private string _TipoPago = "Efectivo";
         private decimal _Monto = 0;
+        private int _ITBIS = 0;
 
 
         private decimal totalPagado = 0;
@@ -55,13 +56,14 @@ namespace CapaPresentacion
 
         public void setArticulo (string iddetalle_ingreso,string nombre,
             decimal precio_compra,decimal precio_venta,int stock,
-            DateTime fecha_vencimiento)
+            DateTime fecha_vencimiento, int itbis)
         {
             this.txtIdarticulo.Text = iddetalle_ingreso;
             this.txtArticulo.Text = nombre;
             this.txtPrecio_Compra.Text = Convert.ToString(precio_compra);
             this.txtPrecio_Venta.Text = Convert.ToString(precio_venta);
             this.txtStock_Actual.Text = Convert.ToString(stock);
+            this._ITBIS = itbis;
             if (int.Parse( this.txtStock_Actual.Text) < 10)
             {
                 MessageBox.Show("Stock bajo por favor verificar Almacen");
@@ -113,7 +115,7 @@ namespace CapaPresentacion
             this.txtSerie.Text = "1318";
             this.txtCorrelativo.Text = "43387";
             this.txtDescuento.Text = "0";
-
+            this._ITBIS = 0;
             this.crearTabla();
             this.btnBuscarRNC.Enabled = false;
             _IdEmpresa = 1;
@@ -129,6 +131,7 @@ namespace CapaPresentacion
             this.txtArticulo.Text = string.Empty;
             this.txtStock_Actual.Text = string.Empty;
             this.txtCantidad.Text = string.Empty;
+            this._ITBIS = 0;
             this.txtPrecio_Compra.Text = string.Empty;
             this.txtPrecio_Venta.Text = string.Empty;
             this.txtDescuento.Text = "0";
@@ -216,6 +219,7 @@ namespace CapaPresentacion
             this.dtDetalle.Columns.Add("cantidad", System.Type.GetType("System.Int32"));
             this.dtDetalle.Columns.Add("precio_venta", System.Type.GetType("System.Decimal"));
             this.dtDetalle.Columns.Add("descuento", System.Type.GetType("System.Decimal"));
+            this.dtDetalle.Columns.Add("impuesto", System.Type.GetType("System.Int32"));
             this.dtDetalle.Columns.Add("subtotal", System.Type.GetType("System.Decimal"));
             //this.dtDetalle.Columns.Add("Impuesto", System.Type.GetType("System.Decimal"));
             //Relacionar nuestro DataGRidView con nuestro DataTable
@@ -485,6 +489,7 @@ namespace CapaPresentacion
                         row["precio_venta"] = Convert.ToDecimal(this.txtPrecio_Venta.Text);
                         row["descuento"] = Convert.ToDecimal(this.txtDescuento.Text);
                         row["subtotal"] = subTotal;
+                        row["impuesto"] = this._ITBIS;
                         this.dtDetalle.Rows.Add(row);
                         this.limpiarDetalle();
                         this.txtStock_Actual.BackColor = Color.FromArgb(255, 192, 128);

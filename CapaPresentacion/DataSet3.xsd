@@ -43,6 +43,7 @@
               <Mapping SourceColumn="RNC" DataSetColumn="RNC" />
               <Mapping SourceColumn="monto_pagado" DataSetColumn="monto_pagado" />
               <Mapping SourceColumn="tipo_pago" DataSetColumn="tipo_pago" />
+              <Mapping SourceColumn="itbis" DataSetColumn="itbis" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -156,6 +157,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="itbis" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnitbis" msprop:Generator_ColumnPropNameInRow="itbis" msprop:Generator_ColumnPropNameInTable="itbisColumn" msprop:Generator_UserColumnName="itbis" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

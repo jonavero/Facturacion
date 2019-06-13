@@ -163,12 +163,12 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(434, 70);
+            this.label11.Location = new System.Drawing.Point(434, 73);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(27, 13);
+            this.label11.Size = new System.Drawing.Size(37, 13);
             this.label11.TabIndex = 26;
-            this.label11.Text = "ITB:";
+            this.label11.Text = "ITBIS:";
             // 
             // txtCorrelativo
             // 

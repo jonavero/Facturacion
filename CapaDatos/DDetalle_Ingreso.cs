@@ -21,6 +21,9 @@ namespace CapaDatos
         private int _Stock_Actual;
         private DateTime _Fecha_Produccion;
         private DateTime _Fecha_Vencimiento;
+        private int _ITBIS;
+        private string _Nombre;
+
 
         //Propiedades
         public int Iddetalle_Ingreso
@@ -79,6 +82,20 @@ namespace CapaDatos
             get { return _Fecha_Vencimiento; }
             set { _Fecha_Vencimiento = value; }
         }
+
+        public int ITBIS
+        {
+            get { return _ITBIS; }
+            set { _ITBIS = value; }
+        }
+
+        public string Nombre
+        {
+            get { return _Nombre; }
+            set { _Nombre = value; }
+        }
+
+
         //Constructores 
         public DDetalle_Ingreso()
         {
@@ -86,8 +103,8 @@ namespace CapaDatos
         }
         public DDetalle_Ingreso(int iddetalle_ingreso,int idingreso,
             int idarticulo,decimal precio_compra,decimal precio_venta,
-            int stock_inicial,int stock_actual,DateTime fecha_produccion,
-            DateTime fecha_vencimiento)
+            int stock_inicial,int stock_actual, DateTime fecha_produccion,
+            DateTime fecha_vencimiento, int itbis)
         {
             this.Iddetalle_Ingreso = iddetalle_ingreso;
             this.Idingreso = idingreso;
@@ -98,6 +115,26 @@ namespace CapaDatos
             this.Stock_Actual = stock_actual;
             this.Fecha_Produccion = fecha_produccion;
             this.Fecha_Vencimiento = fecha_vencimiento;
+            this.ITBIS = itbis;
+           
+
+        }
+
+        public DDetalle_Ingreso(int iddetalle_ingreso, int idarticulo,
+            string nombre, decimal precio_compra, decimal precio_venta,
+            int stock_inicial, DateTime fecha_produccion,
+            DateTime fecha_vencimiento, int itbis)
+        {
+            this.Iddetalle_Ingreso = iddetalle_ingreso;
+            this.Precio_Compra = precio_compra;
+            this.Precio_Venta = precio_venta;
+            this.Stock_Inicial = stock_inicial;
+            this.Fecha_Produccion = fecha_produccion;
+            this.Fecha_Vencimiento = fecha_vencimiento;
+            this.ITBIS = itbis;
+            this.Nombre = nombre;
+            this.Idarticulo = idarticulo;
+
 
         }
 
@@ -172,6 +209,12 @@ namespace CapaDatos
                 ParFecha_Vencimiento.Value = Detalle_Ingreso.Fecha_Vencimiento;
                 SqlCmd.Parameters.Add(ParFecha_Vencimiento);
 
+                SqlParameter ParITBIS = new SqlParameter();
+                ParITBIS.ParameterName = "@itbis_pro";
+                ParITBIS.SqlDbType = SqlDbType.Int;
+                ParITBIS.Value = Detalle_Ingreso.ITBIS;
+                SqlCmd.Parameters.Add(ParITBIS);
+
                 //Ejecutamos nuestro comando
 
                 rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Ingreso el Registro";
@@ -186,6 +229,108 @@ namespace CapaDatos
             return rpta;
 
         }
+
+        public string ModificarIngreso(DDetalle_Ingreso Detalle_Ingreso)
+        {
+            string rpta = "";
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+
+                SqlCon.ConnectionString = Conexion.Cn;
+                SqlCon.Open();
+
+                //Establecer el Comando
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "speditar_datalle_ingreso";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+                SqlCmd.Parameters.AddWithValue("@nombre", Detalle_Ingreso.Nombre);
+                SqlCmd.Parameters.AddWithValue("@precio_compra", Detalle_Ingreso.Precio_Compra);
+                SqlCmd.Parameters.AddWithValue("@precio_venta", Detalle_Ingreso.Precio_Venta);
+                SqlCmd.Parameters.AddWithValue("@stock", Detalle_Ingreso.Stock_Inicial);
+                SqlCmd.Parameters.AddWithValue("@fechaProd", Detalle_Ingreso.Fecha_Produccion);
+                SqlCmd.Parameters.AddWithValue("@fechaVenc", Detalle_Ingreso.Fecha_Vencimiento);
+                SqlCmd.Parameters.AddWithValue("@idDetalle", Detalle_Ingreso.Iddetalle_Ingreso);
+                SqlCmd.Parameters.AddWithValue("@idArticulo", Detalle_Ingreso.Idarticulo);
+                SqlCmd.Parameters.AddWithValue("@itbis", Detalle_Ingreso.ITBIS);
+
+                //SqlParameter ParNombre = new SqlParameter();
+                //ParNombre.ParameterName = "@nombre";
+                //ParNombre.SqlDbType = SqlDbType.VarChar;
+                //ParNombre.Size = 75;
+                //ParNombre.Value = Detalle_Ingreso.Nombre;
+                //SqlCmd.Parameters.Add(ParNombre);
+
+                //SqlParameter ParPrecio_Compra = new SqlParameter();
+                //ParPrecio_Compra.ParameterName = "@precio_compra";
+                //ParPrecio_Compra.SqlDbType = SqlDbType.Money;
+                //ParPrecio_Compra.Value = Detalle_Ingreso.Precio_Compra;
+                //SqlCmd.Parameters.Add(ParPrecio_Compra);
+
+                //SqlParameter ParPrecio_Venta = new SqlParameter();
+                //ParPrecio_Venta.ParameterName = "@precio_venta";
+                //ParPrecio_Venta.SqlDbType = SqlDbType.Money;
+                //ParPrecio_Venta.Value = Detalle_Ingreso.Precio_Venta;
+                //SqlCmd.Parameters.Add(ParPrecio_Venta);
+
+                //SqlParameter ParStock_Inicial = new SqlParameter();
+                //ParStock_Inicial.ParameterName = "@stock";
+                //ParStock_Inicial.SqlDbType = SqlDbType.Int;
+                //ParStock_Inicial.Value = Detalle_Ingreso.Stock_Inicial;
+                //SqlCmd.Parameters.Add(ParStock_Inicial);
+
+                //SqlParameter ParFecha_Produccion = new SqlParameter();
+                //ParFecha_Produccion.ParameterName = "@fechaProd";
+                //ParFecha_Produccion.SqlDbType = SqlDbType.Date;
+                //ParFecha_Produccion.Value = Detalle_Ingreso.Fecha_Produccion;
+                //SqlCmd.Parameters.Add(ParFecha_Produccion);
+
+                //SqlParameter ParFecha_Vencimiento = new SqlParameter();
+                //ParFecha_Vencimiento.ParameterName = "@fechaVenc";
+                //ParFecha_Vencimiento.SqlDbType = SqlDbType.Date;
+                //ParFecha_Vencimiento.Value = Detalle_Ingreso.Fecha_Vencimiento;
+                //SqlCmd.Parameters.Add(ParFecha_Vencimiento);
+
+                //SqlParameter ParIdingreso = new SqlParameter();
+                //ParIdingreso.ParameterName = "@idDetalle";
+                //ParIdingreso.SqlDbType = SqlDbType.Int;
+                //ParIdingreso.Value = Detalle_Ingreso.Iddetalle_Ingreso;
+                //SqlCmd.Parameters.Add(ParIdingreso);
+
+                //SqlParameter ParIdarticulo = new SqlParameter();
+                //ParIdarticulo.ParameterName = "@idArticulo";
+                //ParIdarticulo.SqlDbType = SqlDbType.Int;
+                //ParIdarticulo.Value = Detalle_Ingreso.Idarticulo;
+                //SqlCmd.Parameters.Add(ParIdarticulo);
+
+                //SqlParameter ParITBIS = new SqlParameter();
+                //ParITBIS.ParameterName = "@itbis";
+                //ParITBIS.SqlDbType = SqlDbType.Int;
+                //ParITBIS.Value = Detalle_Ingreso.ITBIS;
+                //SqlCmd.Parameters.Add(ParITBIS);
+
+                //Ejecutamos nuestro comando
+
+                rpta = SqlCmd.ExecuteNonQuery() == 2 ? "OK" : "NO se Ingreso el Registro";
+                
+
+
+
+            }
+            catch (Exception ex)
+            {
+                rpta = ex.Message;
+            }
+            finally
+            {
+                SqlCon.Close();
+            }
+
+            return rpta;
+
+        }
+
 
     }
 }

@@ -49,6 +49,9 @@
             this.label16 = new System.Windows.Forms.Label();
             this.dataListadoDetalle = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rbNo = new System.Windows.Forms.RadioButton();
+            this.rbSi = new System.Windows.Forms.RadioButton();
+            this.label17 = new System.Windows.Forms.Label();
             this.btnQuitar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dtFecha_Vencimiento = new System.Windows.Forms.DateTimePicker();
@@ -87,6 +90,29 @@
             this.label1 = new System.Windows.Forms.Label();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dgvArticuloMod = new System.Windows.Forms.DataGridView();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.rbNoItbisMod = new System.Windows.Forms.RadioButton();
+            this.rbSiItbisMod = new System.Windows.Forms.RadioButton();
+            this.label18 = new System.Windows.Forms.Label();
+            this.dtpFechaVencMod = new System.Windows.Forms.DateTimePicker();
+            this.label19 = new System.Windows.Forms.Label();
+            this.dtpFechaProdMod = new System.Windows.Forms.DateTimePicker();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtPrVentMod = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txtPrCompMod = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.txtStockMod = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.txtNombreMod = new System.Windows.Forms.TextBox();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.txtBuscarArticula = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.btnAnularMod = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
@@ -96,17 +122,21 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticuloMod)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(9, 51);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(715, 373);
+            this.tabControl1.Size = new System.Drawing.Size(715, 469);
             this.tabControl1.TabIndex = 10;
             // 
             // tabPage1
@@ -126,7 +156,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(707, 347);
+            this.tabPage1.Size = new System.Drawing.Size(707, 443);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -189,7 +219,7 @@
             this.dataListado.ReadOnly = true;
             this.dataListado.RowTemplate.Height = 24;
             this.dataListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataListado.Size = new System.Drawing.Size(670, 241);
+            this.dataListado.Size = new System.Drawing.Size(670, 336);
             this.dataListado.TabIndex = 7;
             this.dataListado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataListado_CellContentClick);
             this.dataListado.DoubleClick += new System.EventHandler(this.dataListado_DoubleClick);
@@ -281,7 +311,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(707, 347);
+            this.tabPage2.Size = new System.Drawing.Size(707, 443);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -315,7 +345,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(673, 315);
+            this.groupBox1.Size = new System.Drawing.Size(673, 410);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingresos Almacén";
@@ -323,7 +353,7 @@
             // lblTotal_Pagado
             // 
             this.lblTotal_Pagado.AutoSize = true;
-            this.lblTotal_Pagado.Location = new System.Drawing.Point(106, 291);
+            this.lblTotal_Pagado.Location = new System.Drawing.Point(106, 373);
             this.lblTotal_Pagado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotal_Pagado.Name = "lblTotal_Pagado";
             this.lblTotal_Pagado.Size = new System.Drawing.Size(22, 13);
@@ -333,7 +363,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(9, 290);
+            this.label16.Location = new System.Drawing.Point(9, 372);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(95, 13);
@@ -345,15 +375,19 @@
             this.dataListadoDetalle.AllowUserToAddRows = false;
             this.dataListadoDetalle.AllowUserToDeleteRows = false;
             this.dataListadoDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataListadoDetalle.Location = new System.Drawing.Point(11, 175);
+            this.dataListadoDetalle.Location = new System.Drawing.Point(11, 220);
             this.dataListadoDetalle.Margin = new System.Windows.Forms.Padding(2);
             this.dataListadoDetalle.Name = "dataListadoDetalle";
             this.dataListadoDetalle.RowTemplate.Height = 24;
-            this.dataListadoDetalle.Size = new System.Drawing.Size(637, 104);
+            this.dataListadoDetalle.Size = new System.Drawing.Size(637, 142);
             this.dataListadoDetalle.TabIndex = 32;
+            this.dataListadoDetalle.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataListadoDetalle_CellContentClick);
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.rbNo);
+            this.groupBox2.Controls.Add(this.rbSi);
+            this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.btnQuitar);
             this.groupBox2.Controls.Add(this.btnAgregar);
             this.groupBox2.Controls.Add(this.dtFecha_Vencimiento);
@@ -373,9 +407,41 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(641, 76);
+            this.groupBox2.Size = new System.Drawing.Size(641, 110);
             this.groupBox2.TabIndex = 28;
             this.groupBox2.TabStop = false;
+            // 
+            // rbNo
+            // 
+            this.rbNo.AutoSize = true;
+            this.rbNo.Checked = true;
+            this.rbNo.Location = new System.Drawing.Point(97, 78);
+            this.rbNo.Name = "rbNo";
+            this.rbNo.Size = new System.Drawing.Size(39, 17);
+            this.rbNo.TabIndex = 44;
+            this.rbNo.TabStop = true;
+            this.rbNo.Text = "No";
+            this.rbNo.UseVisualStyleBackColor = true;
+            // 
+            // rbSi
+            // 
+            this.rbSi.AutoSize = true;
+            this.rbSi.Location = new System.Drawing.Point(57, 78);
+            this.rbSi.Name = "rbSi";
+            this.rbSi.Size = new System.Drawing.Size(34, 17);
+            this.rbSi.TabIndex = 43;
+            this.rbSi.Text = "Si";
+            this.rbSi.UseVisualStyleBackColor = true;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(13, 80);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(37, 13);
+            this.label17.TabIndex = 42;
+            this.label17.Text = "ITBIS:";
             // 
             // btnQuitar
             // 
@@ -678,7 +744,7 @@
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnCancelar.Image = global::CapaPresentacion.Properties.Resources.error2;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(568, 284);
+            this.btnCancelar.Location = new System.Drawing.Point(568, 366);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(80, 27);
@@ -692,7 +758,7 @@
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnGuardar.Image = global::CapaPresentacion.Properties.Resources.disco;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(478, 284);
+            this.btnGuardar.Location = new System.Drawing.Point(478, 366);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(80, 27);
@@ -706,7 +772,7 @@
             this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnNuevo.Image = global::CapaPresentacion.Properties.Resources.nuevo;
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(393, 284);
+            this.btnNuevo.Location = new System.Drawing.Point(393, 366);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(80, 26);
@@ -761,18 +827,281 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox2.BackgroundImage = global::CapaPresentacion.Properties.Resources.iconfinder_box_196757;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(192, 13);
+            this.pictureBox2.Location = new System.Drawing.Point(234, 12);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(71, 55);
+            this.pictureBox2.Size = new System.Drawing.Size(43, 39);
             this.pictureBox2.TabIndex = 16;
             this.pictureBox2.TabStop = false;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.btnAnularMod);
+            this.tabPage3.Controls.Add(this.label25);
+            this.tabPage3.Controls.Add(this.txtBuscarArticula);
+            this.tabPage3.Controls.Add(this.btnEditar);
+            this.tabPage3.Controls.Add(this.groupBox3);
+            this.tabPage3.Controls.Add(this.dgvArticuloMod);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(707, 443);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Modificar artículo";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // dgvArticuloMod
+            // 
+            this.dgvArticuloMod.AllowUserToAddRows = false;
+            this.dgvArticuloMod.AllowUserToDeleteRows = false;
+            this.dgvArticuloMod.AllowUserToOrderColumns = true;
+            this.dgvArticuloMod.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArticuloMod.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewCheckBoxColumn1});
+            this.dgvArticuloMod.Location = new System.Drawing.Point(18, 174);
+            this.dgvArticuloMod.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvArticuloMod.MultiSelect = false;
+            this.dgvArticuloMod.Name = "dgvArticuloMod";
+            this.dgvArticuloMod.ReadOnly = true;
+            this.dgvArticuloMod.RowTemplate.Height = 24;
+            this.dgvArticuloMod.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvArticuloMod.Size = new System.Drawing.Size(670, 214);
+            this.dgvArticuloMod.TabIndex = 8;
+            this.dgvArticuloMod.DoubleClick += new System.EventHandler(this.dgvArticuloMod_DoubleClick);
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.HeaderText = "Eliminar";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.rbNoItbisMod);
+            this.groupBox3.Controls.Add(this.rbSiItbisMod);
+            this.groupBox3.Controls.Add(this.label18);
+            this.groupBox3.Controls.Add(this.dtpFechaVencMod);
+            this.groupBox3.Controls.Add(this.label19);
+            this.groupBox3.Controls.Add(this.dtpFechaProdMod);
+            this.groupBox3.Controls.Add(this.label20);
+            this.groupBox3.Controls.Add(this.txtPrVentMod);
+            this.groupBox3.Controls.Add(this.label21);
+            this.groupBox3.Controls.Add(this.txtPrCompMod);
+            this.groupBox3.Controls.Add(this.label22);
+            this.groupBox3.Controls.Add(this.txtStockMod);
+            this.groupBox3.Controls.Add(this.label23);
+            this.groupBox3.Controls.Add(this.label24);
+            this.groupBox3.Controls.Add(this.txtNombreMod);
+            this.groupBox3.Location = new System.Drawing.Point(18, 11);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Size = new System.Drawing.Size(670, 110);
+            this.groupBox3.TabIndex = 29;
+            this.groupBox3.TabStop = false;
+            // 
+            // rbNoItbisMod
+            // 
+            this.rbNoItbisMod.AutoSize = true;
+            this.rbNoItbisMod.Checked = true;
+            this.rbNoItbisMod.Location = new System.Drawing.Point(97, 78);
+            this.rbNoItbisMod.Name = "rbNoItbisMod";
+            this.rbNoItbisMod.Size = new System.Drawing.Size(39, 17);
+            this.rbNoItbisMod.TabIndex = 44;
+            this.rbNoItbisMod.TabStop = true;
+            this.rbNoItbisMod.Text = "No";
+            this.rbNoItbisMod.UseVisualStyleBackColor = true;
+            // 
+            // rbSiItbisMod
+            // 
+            this.rbSiItbisMod.AutoSize = true;
+            this.rbSiItbisMod.Location = new System.Drawing.Point(57, 78);
+            this.rbSiItbisMod.Name = "rbSiItbisMod";
+            this.rbSiItbisMod.Size = new System.Drawing.Size(34, 17);
+            this.rbSiItbisMod.TabIndex = 43;
+            this.rbSiItbisMod.Text = "Si";
+            this.rbSiItbisMod.UseVisualStyleBackColor = true;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(13, 80);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(37, 13);
+            this.label18.TabIndex = 42;
+            this.label18.Text = "ITBIS:";
+            // 
+            // dtpFechaVencMod
+            // 
+            this.dtpFechaVencMod.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaVencMod.Location = new System.Drawing.Point(497, 39);
+            this.dtpFechaVencMod.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpFechaVencMod.Name = "dtpFechaVencMod";
+            this.dtpFechaVencMod.Size = new System.Drawing.Size(138, 20);
+            this.dtpFechaVencMod.TabIndex = 39;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(429, 41);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(71, 13);
+            this.label19.TabIndex = 38;
+            this.label19.Text = "Fecha Venc.:";
+            // 
+            // dtpFechaProdMod
+            // 
+            this.dtpFechaProdMod.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaProdMod.Location = new System.Drawing.Point(497, 16);
+            this.dtpFechaProdMod.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpFechaProdMod.Name = "dtpFechaProdMod";
+            this.dtpFechaProdMod.Size = new System.Drawing.Size(138, 20);
+            this.dtpFechaProdMod.TabIndex = 33;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(429, 19);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(68, 13);
+            this.label20.TabIndex = 32;
+            this.label20.Text = "Fecha Prod.:";
+            // 
+            // txtPrVentMod
+            // 
+            this.txtPrVentMod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtPrVentMod.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPrVentMod.Location = new System.Drawing.Point(293, 44);
+            this.txtPrVentMod.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPrVentMod.Name = "txtPrVentMod";
+            this.txtPrVentMod.Size = new System.Drawing.Size(119, 20);
+            this.txtPrVentMod.TabIndex = 37;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(218, 44);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(71, 13);
+            this.label21.TabIndex = 36;
+            this.label21.Text = "Precio Venta:";
+            // 
+            // txtPrCompMod
+            // 
+            this.txtPrCompMod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtPrCompMod.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPrCompMod.Location = new System.Drawing.Point(293, 17);
+            this.txtPrCompMod.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPrCompMod.Name = "txtPrCompMod";
+            this.txtPrCompMod.Size = new System.Drawing.Size(119, 20);
+            this.txtPrCompMod.TabIndex = 35;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(218, 17);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(79, 13);
+            this.label22.TabIndex = 34;
+            this.label22.Text = "Precio Compra:";
+            // 
+            // txtStockMod
+            // 
+            this.txtStockMod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtStockMod.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtStockMod.Location = new System.Drawing.Point(74, 44);
+            this.txtStockMod.Margin = new System.Windows.Forms.Padding(2);
+            this.txtStockMod.Name = "txtStockMod";
+            this.txtStockMod.Size = new System.Drawing.Size(111, 20);
+            this.txtStockMod.TabIndex = 33;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(9, 44);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(68, 13);
+            this.label23.TabIndex = 32;
+            this.label23.Text = "Stock Inicial:";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(7, 15);
+            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(47, 13);
+            this.label24.TabIndex = 29;
+            this.label24.Text = "Artículo:";
+            // 
+            // txtNombreMod
+            // 
+            this.txtNombreMod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtNombreMod.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNombreMod.Location = new System.Drawing.Point(74, 13);
+            this.txtNombreMod.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombreMod.Name = "txtNombreMod";
+            this.txtNombreMod.Size = new System.Drawing.Size(111, 20);
+            this.txtNombreMod.TabIndex = 30;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnEditar.Enabled = false;
+            this.btnEditar.Image = global::CapaPresentacion.Properties.Resources.modificar;
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditar.Location = new System.Drawing.Point(597, 392);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(91, 27);
+            this.btnEditar.TabIndex = 30;
+            this.btnEditar.Text = "E&ditar";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // txtBuscarArticula
+            // 
+            this.txtBuscarArticula.Location = new System.Drawing.Point(186, 137);
+            this.txtBuscarArticula.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBuscarArticula.Name = "txtBuscarArticula";
+            this.txtBuscarArticula.Size = new System.Drawing.Size(393, 20);
+            this.txtBuscarArticula.TabIndex = 31;
+            this.txtBuscarArticula.TextChanged += new System.EventHandler(this.txtBuscarArticula_TextChanged);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(72, 140);
+            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(99, 13);
+            this.label25.TabIndex = 33;
+            this.label25.Text = "Buscar por nombre:";
+            // 
+            // btnAnularMod
+            // 
+            this.btnAnularMod.BackColor = System.Drawing.Color.Silver;
+            this.btnAnularMod.Image = global::CapaPresentacion.Properties.Resources.eliminar;
+            this.btnAnularMod.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAnularMod.Location = new System.Drawing.Point(450, 392);
+            this.btnAnularMod.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAnularMod.Name = "btnAnularMod";
+            this.btnAnularMod.Size = new System.Drawing.Size(143, 28);
+            this.btnAnularMod.TabIndex = 34;
+            this.btnAnularMod.Text = "&Anular modificación";
+            this.btnAnularMod.UseVisualStyleBackColor = false;
+            this.btnAnularMod.Click += new System.EventHandler(this.btnAnularMod_Click);
             // 
             // FrmIngreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(733, 434);
+            this.ClientSize = new System.Drawing.Size(733, 543);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
@@ -793,6 +1122,11 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticuloMod)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -858,5 +1192,31 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button btnComprobante;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.RadioButton rbNo;
+        private System.Windows.Forms.RadioButton rbSi;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.RadioButton rbNoItbisMod;
+        private System.Windows.Forms.RadioButton rbSiItbisMod;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.DateTimePicker dtpFechaVencMod;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.DateTimePicker dtpFechaProdMod;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox txtPrVentMod;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox txtPrCompMod;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox txtStockMod;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox txtNombreMod;
+        private System.Windows.Forms.DataGridView dgvArticuloMod;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.TextBox txtBuscarArticula;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Button btnAnularMod;
     }
 }

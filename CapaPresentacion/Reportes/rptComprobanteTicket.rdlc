@@ -6,13 +6,16 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.82306cm</Width>
+              <Width>1.69606cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>0.93457cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.34678cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.1136cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.51474cm</Width>
@@ -123,6 +126,46 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox5</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <TopBorder>
+                          <Style>Dashed</Style>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Style>Dashed</Style>
+                        </BottomBorder>
+                        <BackgroundColor>White</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox1">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>ITBIS</Value>
+                              <Style>
+                                <FontFamily>Lucida Sans</FontFamily>
+                                <FontSize>7pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox1</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -289,6 +332,40 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
+                    <Textbox Name="itbis">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!itbis.Value</Value>
+                              <Style>
+                                <FontFamily>Lucida Sans</FontFamily>
+                                <FontSize>7pt</FontSize>
+                                <Format>0.00;(0.00)</Format>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>itbis</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
                     <Textbox Name="Total_Parcial">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -327,6 +404,7 @@
         </TablixBody>
         <TablixColumnHierarchy>
           <TablixMembers>
+            <TablixMember />
             <TablixMember />
             <TablixMember />
             <TablixMember />
@@ -439,7 +517,7 @@
         <Top>8.11624cm</Top>
         <Left>0.53722cm</Left>
         <Height>1.2cm</Height>
-        <Width>6.20909cm</Width>
+        <Width>7.19569cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -696,7 +774,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=sum(Fields!Total_Parcial.Value)-sum(Fields!Total_Parcial.Value)*Fields!igv.Value/100</Value>
+                <Value>=sum(Fields!Total_Parcial.Value)-sum(Fields!itbis.Value)</Value>
                 <Style>
                   <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>7pt</FontSize>
@@ -731,7 +809,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=sum(Fields!Total_Parcial.Value)*Fields!igv.Value/100</Value>
+                <Value>=Sum(Fields!itbis.Value)</Value>
                 <Style>
                   <FontFamily>Lucida Sans</FontFamily>
                   <FontSize>7pt</FontSize>
@@ -1596,7 +1674,7 @@
     <Height>5.21122in</Height>
     <Style />
   </Body>
-  <Width>3.17051in</Width>
+  <Width>3.7132in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
@@ -1614,7 +1692,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>9d03ed50-b80d-4c56-95bc-97b3b9abe5ef</rd:DataSourceID>
+      <rd:DataSourceID>532dfa07-bb9a-4548-b28b-30d78706fe5f</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -1707,6 +1785,10 @@
         <Field Name="tipo_pago">
           <DataField>tipo_pago</DataField>
           <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="itbis">
+          <DataField>itbis</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>

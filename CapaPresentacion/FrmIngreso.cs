@@ -18,6 +18,8 @@ namespace CapaPresentacion
         private bool IsNuevo;
         private DataTable dtDetalle;
         private decimal totalPagado = 0;
+        private int idModificarArticulo = 0;
+        private int idModificarDetalle = 0;
 
         private static FrmIngreso _instancia;
 
@@ -143,6 +145,8 @@ namespace CapaPresentacion
         private void Mostrar()
         {
             this.dataListado.DataSource = NIngreso.Mostrar();
+            this.dgvArticuloMod.DataSource = NIngreso.MostrarPorNombre("");
+            this.dgvArticuloMod.Columns[0].Visible = false;
             this.OcultarColumnas();
             lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
         }
@@ -242,24 +246,6 @@ namespace CapaPresentacion
 
                     }
 
-                    //foreach (DataGridViewRow row in dataListado.Rows)
-                    //{
-                    //    if (Convert.ToBoolean(row.Cells[0].Value))
-                    //    {
-                    //        Codigo = Convert.ToString(row.Cells[1].Value);
-                    //        Rpta = NIngreso.Anular(Convert.ToInt32(Codigo));
-
-                    //        if (Rpta.Equals("OK"))
-                    //        {
-                    //            this.MensajeOk("Se Anuló Correctamente el Ingreso");
-                    //        }
-                    //        else
-                    //        {
-                    //            this.MensajeError(Rpta);
-                    //        }
-
-                    //    }
-                    //}
                     this.Mostrar();
                 }
             }
@@ -392,6 +378,9 @@ namespace CapaPresentacion
                     }
                     if (registrar)
                     {
+
+                        int ITBIS = rbSi.Checked ? 18 : 0;
+
                         decimal subTotal=Convert.ToDecimal(this.txtStock.Text)*Convert.ToDecimal(this.txtPrecio_Compra.Text);
                         totalPagado = totalPagado + subTotal;
                         this.lblTotal_Pagado.Text = totalPagado.ToString("#0.00#");
@@ -405,6 +394,7 @@ namespace CapaPresentacion
                         row["fecha_produccion"] = dtFecha_Produccion.Value;
                         row["fecha_vencimiento"] = dtFecha_Vencimiento.Value;
                         row["subtotal"] = subTotal;
+                        row["impuesto"] = ITBIS;
                         this.dtDetalle.Rows.Add(row);
                         this.limpiarDetalle();
 
@@ -471,6 +461,82 @@ namespace CapaPresentacion
         private void tabPage1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataListadoDetalle_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtBuscarArticula_TextChanged(object sender, EventArgs e)
+        {
+
+            this.dgvArticuloMod.DataSource = NIngreso.MostrarPorNombre(this.txtBuscarArticula.Text.Trim());
+
+        }
+
+        private void LimpiarModificarArticulo()
+        {
+            this.idModificarArticulo = 0;
+            this.txtNombreMod.Text = "";
+            this.txtPrCompMod.Text = "";
+            this.txtPrVentMod.Text = "";
+            this.txtStockMod.Text = "";
+            this.dtpFechaProdMod.Value = DateTime.Now;
+            this.dtpFechaVencMod.Value = DateTime.Now;
+            this.idModificarDetalle = 0;
+            this.btnEditar.Enabled = false;
+        }
+        private void dgvArticuloMod_DoubleClick(object sender, EventArgs e)
+        {
+            this.idModificarArticulo = Convert.ToInt32(this.dgvArticuloMod.CurrentRow.Cells["idarticulo"].Value);
+            this.txtNombreMod.Text = Convert.ToString(this.dgvArticuloMod.CurrentRow.Cells["Articulo"].Value);
+            this.txtPrCompMod.Text = Convert.ToString(this.dgvArticuloMod.CurrentRow.Cells["precio_compra"].Value);
+            this.txtPrVentMod.Text = Convert.ToString(this.dgvArticuloMod.CurrentRow.Cells["precio_venta"].Value);
+            this.dtpFechaProdMod.Value = Convert.ToDateTime(this.dgvArticuloMod.CurrentRow.Cells["fecha_produccion"].Value);
+            this.dtpFechaVencMod.Value = Convert.ToDateTime(this.dgvArticuloMod.CurrentRow.Cells["fecha_vencimiento"].Value);
+            this.txtStockMod.Text = Convert.ToString(this.dgvArticuloMod.CurrentRow.Cells["stock_inicial"].Value);
+            this.idModificarDetalle = Convert.ToInt32(this.dgvArticuloMod.CurrentRow.Cells["iddetalle_ingreso"].Value);
+            this.btnEditar.Enabled = true;
+
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (this.txtNombreMod.Text == string.Empty || this.txtPrCompMod.Text == string.Empty
+                   || this.txtPrVentMod.Text == string.Empty || this.txtStockMod.Text == string.Empty)
+            {
+                MensajeError("Falta ingresar algunos datos");
+ 
+            }
+            else
+            {
+                try
+                {
+
+                    int itbis = rbSiItbisMod.Checked ? 18 : 0;
+                    string message = NIngreso.ModificarDetalle(idModificarDetalle, idModificarArticulo,
+                        txtNombreMod.Text, Convert.ToDecimal(txtPrCompMod.Text), 
+                        Convert.ToDecimal(txtPrVentMod.Text), Convert.ToInt32(txtStockMod.Text),
+                        Convert.ToDateTime(dtpFechaProdMod.Value),Convert.ToDateTime(dtpFechaVencMod.Value), itbis);
+                    LimpiarModificarArticulo();
+
+                    MensajeOk(message);
+                    this.dgvArticuloMod.DataSource = NIngreso.MostrarPorNombre(this.txtBuscarArticula.Text.Trim());
+                }
+                catch (Exception)
+                {
+
+                    MensajeError("Existen datos que no son validos");
+                }
+                
+            }
+            
+        }
+
+        private void btnAnularMod_Click(object sender, EventArgs e)
+        {
+            LimpiarModificarArticulo();
         }
     }
 }
