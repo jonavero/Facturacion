@@ -312,7 +312,7 @@ namespace CapaDatos
 
                 //Ejecutamos nuestro comando
 
-                rpta = SqlCmd.ExecuteNonQuery() == 2 ? "OK" : "NO se Ingreso el Registro";
+                rpta = SqlCmd.ExecuteNonQuery() == 2 ? "Datos modificados exitosamente" : "NO se Ingreso el Registro";
                 
 
 
