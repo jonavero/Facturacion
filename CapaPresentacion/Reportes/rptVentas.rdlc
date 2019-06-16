@@ -635,6 +635,8 @@
                               <Style>
                                 <FontFamily>verdana</FontFamily>
                                 <FontSize>8pt</FontSize>
+                                <Format>'$'#,0.00;('$'#,0.00)</Format>
+                                <rd:FormatSymbolCulture>en-US</rd:FormatSymbolCulture>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -806,6 +808,8 @@
                               <Style>
                                 <FontFamily>verdana</FontFamily>
                                 <FontSize>8pt</FontSize>
+                                <Format>'$'#,0.00;('$'#,0.00)</Format>
+                                <rd:FormatSymbolCulture>en-US</rd:FormatSymbolCulture>
                               </Style>
                             </TextRun>
                           </TextRuns>
